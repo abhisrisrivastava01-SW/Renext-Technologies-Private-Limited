@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Services | Renext Technologies Pvt. Ltd.</title>
+  <meta name="description" content="Account Payable automation, Ads Creative video production, AI Data Annotation, Cloud FinOps — Renext Technologies enterprise services.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-r.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['Inter','sans-serif'],body:['Inter','sans-serif'],mono:['JetBrains Mono','monospace']}}}}</script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#F4F6FB]">
+
+<!-- TOP BAR -->
+<div class="site-topbar">
+  <div class="container flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-2">
+      <span class="dot-pulse bg-emerald-400"></span>
+      <span class="text-slate-300 font-semibold tracking-wide">RENEXT TECHNOLOGIES PVT. LTD.</span>
+      <span class="text-slate-700 mx-1">|</span>
+      <span class="text-slate-500">Enterprise Engineering &amp; Platform Services</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="tel:+919548492221" class="flex items-center gap-1.5 hover:text-blue-400 transition-colors">
+        <i data-lucide="phone" class="w-3 h-3 text-blue-400"></i><span>+91 9548492221</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="site-nav" id="main-nav">
+  <div class="container flex items-center justify-between h-[68px]">
+    <a href="index.html" class="flex items-center gap-3" aria-label="Renext Technologies home">
+        <span class="nav-logo-r" aria-hidden="true"></span>
+        <span class="renext-nav-name"><strong>Renext</strong><small>Technologies Pvt Ltd</small></span>
+      </a>
+    <div class="hidden xl:flex items-center gap-7">
+      <a href="index.html"          class="nav-link">Home</a>
+      <a href="about.html"          class="nav-link">About</a>
+      <a href="services.html"       class="nav-link active">Services</a>
+      <a href="spenditwisely.html"  class="nav-link-mint flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span>SpendItWisely</a>
+      <a href="ai-studio.html"      class="nav-link">Ads Creative</a>
+      <a href="contact.html"        class="nav-link">Contact</a>
+    </div>
+    <div class="hidden xl:flex items-center gap-2.5">
+      <a href="contact.html"       class="btn btn-sm btn-primary">Get a Quote</a>
+      <a href="spenditwisely.html" class="btn btn-sm btn-mint">SpendItWisely</a>
+    </div>
+    <button id="nav-toggle" class="xl:hidden p-2 rounded-lg text-slate-400 hover:text-white">
+      <i data-lucide="menu" class="w-5 h-5"></i>
+    </button>
+  </div>
+  <div id="mobile-drawer" class="hidden xl:hidden border-t border-white/5">
+    <div class="container py-4 space-y-1">
+      <a href="index.html"          class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Home</a>
+      <a href="about.html"          class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">About</a>
+      <a href="services.html"       class="block py-2.5 px-3 rounded-lg text-white font-semibold text-sm bg-white/5">Services</a>
+      <a href="spenditwisely.html"  class="block py-2.5 px-3 rounded-lg text-emerald-400 font-semibold text-sm hover:bg-emerald-900/20">SpendItWisely</a>
+      <a href="ai-studio.html"      class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Ads Creative</a>
+      <a href="contact.html"        class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="atm-hero py-24">
+  <div class="container relative z-10">
+    <div class="max-w-4xl">
+      <div class="reveal-1 inline-flex items-center gap-2 mb-6">
+        <span class="chip chip-cobalt"><i data-lucide="cpu" class="w-3 h-3"></i> Core Service Capabilities</span>
+      </div>
+      <h1 class="reveal-2 t-headline text-[clamp(2rem,5vw,4rem)] text-white mb-6">
+        Enterprise Technology,<br>
+        <span class="text-gradient-cobalt">Automation &amp; Cloud Systems</span>
+      </h1>
+      <p class="reveal-3 font-body text-slate-400 text-base leading-relaxed max-w-2xl mb-8 font-light">
+        From touchless Account Payable workflows and programmatic AI creative generation to high-precision dataset annotation and cloud FinOps governance — explore our specialised commercial solutions.
+      </p>
+      <div class="reveal-4 flex flex-wrap gap-2 font-mono">
+        <a href="#ap-service"           class="chip chip-cobalt hover:bg-blue-600/20 cursor-pointer transition-colors">[01] Account Payable</a>
+        <a href="#ai-studio-service"    class="chip chip-cobalt hover:bg-blue-600/20 cursor-pointer transition-colors">[02] Ads Creative</a>
+        <a href="#ai-annotation-service" class="chip chip-cobalt hover:bg-blue-600/20 cursor-pointer transition-colors">[03] AI Annotation</a>
+        <a href="#cloud-finops"         class="chip chip-cobalt hover:bg-blue-600/20 cursor-pointer transition-colors">[04] Cloud &amp; FinOps</a>
+        <a href="#custom-software"      class="chip chip-cobalt hover:bg-blue-600/20 cursor-pointer transition-colors">[05] Custom Software</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 1. ACCOUNT PAYABLE -->
+<section id="ap-service" class="ctx-white py-20 border-b border-slate-100">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+      <div class="space-y-6">
+        <div class="section-index-dark">01 — Financial Operations</div>
+        <span class="chip chip-light-cobalt">[SYS.01] Account Payable</span>
+        <h2 class="t-headline text-[clamp(1.6rem,3vw,2.6rem)] text-slate-900">
+          Account Payable <span class="text-cobalt">Automation Service</span>
+        </h2>
+        <p class="font-body text-slate-600 text-sm leading-relaxed">
+          Eliminate manual data entry, overpayment errors, and billing fraud. Renext delivers end-to-end <strong>Straight-Through Processing (STP)</strong> for modern enterprise finance departments, achieving automated <strong>3-Way Matching</strong> between Purchase Orders, Goods Receipt Notes (GRN), and vendor invoices with 99.8% precision.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="font-display font-bold text-sm text-slate-900 mb-1">1. AI OCR/ICR Ingestion</div>
+            <p class="text-slate-500 text-[11px] leading-relaxed">Multi-currency line items, vendor details, and dates parsed from PDFs and physical scans automatically.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="font-display font-bold text-sm text-slate-900 mb-1">2. 3-Way PO Matching</div>
+            <p class="text-slate-500 text-[11px] leading-relaxed">Automated cross-validation against PO and GRN with customisable tolerance thresholds.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="font-display font-bold text-sm text-slate-900 mb-1">3. GL Auto-Coding &amp; ERP</div>
+            <p class="text-slate-500 text-[11px] leading-relaxed">Direct 2-way sync with SAP S/4HANA, Oracle NetSuite, Dynamics 365, Tally, and Zoho Books.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="font-display font-bold text-sm text-slate-900 mb-1">4. Fraud &amp; Duplicate Guard</div>
+            <p class="text-slate-500 text-[11px] leading-relaxed">Algorithmic duplicate invoice detection and dynamic early-payment discounting models.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-sm">Request AP Demo <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+
+      <!-- Interactive AP Simulator -->
+      <div class="bg-[#080B14] text-white rounded-2xl p-6 border border-white/[0.08] shadow-2xl space-y-5">
+        <div class="flex items-center justify-between border-b border-white/[0.08] pb-3">
+          <div class="flex items-center gap-2">
+            <i data-lucide="cpu" class="w-4 h-4 text-blue-400"></i>
+            <h3 class="font-display font-bold text-sm text-white">Live AP 3-Way Matching Simulator</h3>
+          </div>
+          <span class="font-mono text-[10px] text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">STP ACTIVE</span>
+        </div>
+        <div class="space-y-3 text-xs">
+          <div>
+            <label class="block text-slate-400 text-[11px] mb-1 font-mono">Select Enterprise Sample Invoice:</label>
+            <select id="ap-invoice-select" class="w-full bg-slate-900 border border-slate-700 text-white rounded-xl p-2.5 font-mono text-xs focus:outline-none focus:border-blue-500">
+              <option value="cloud">Apex Cloud Infrastructure (₹1,71,100.00)</option>
+              <option value="hardware">NexGen Compute &amp; Peripherals (₹4,48,400.00)</option>
+              <option value="consulting">Enterprise DevOps Advisers (₹1,12,100.00)</option>
+            </select>
+          </div>
+          <button id="ap-run-btn" class="btn btn-primary w-full text-xs">
+            <i data-lucide="play" class="w-3.5 h-3.5"></i>
+            <span>Trigger OCR Extraction &amp; 3-Way PO Match</span>
+          </button>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900/90 border border-white/[0.08] space-y-2 text-xs font-mono">
+          <div class="flex justify-between text-slate-400"><span>Vendor:</span><strong id="ap-vendor-name" class="text-white font-body">Apex Cloud Systems Ltd</strong></div>
+          <div class="flex justify-between text-slate-400"><span>Tax ID:</span><strong id="ap-gstin" class="text-blue-400">07AAACA1234F1Z9</strong></div>
+          <div class="flex justify-between text-slate-400"><span>Invoice Ref:</span><strong id="ap-invoice-no" class="text-slate-200">INV-2026-0982</strong></div>
+          <div class="flex justify-between text-slate-400"><span>3-Way PO Match:</span><strong id="ap-po-match" class="text-emerald-400">PO-88421 (100% Matched)</strong></div>
+          <div class="pt-2 border-t border-slate-800 flex justify-between text-sm font-bold text-white">
+            <span>Payable Total:</span><span id="ap-total" class="text-cyan-400">₹1,71,100.00</span>
+          </div>
+        </div>
+        <button id="ap-approve-btn" class="btn btn-mint w-full text-xs">1-Click Approve &amp; Disburse Payment</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2. ADS CREATIVE -->
+<section id="ai-studio-service" class="atm-subtle py-20 border-b border-slate-200">
+  <div class="container grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="space-y-6">
+      <div class="section-index-dark">02 — Ads Creative</div>
+      <h2 class="t-headline text-[clamp(1.7rem,3vw,2.6rem)] text-slate-900">Video people <span class="text-cobalt">want to watch.</span></h2>
+      <p class="font-body text-slate-600 text-base leading-relaxed max-w-xl">Our creators combine concept, AI-assisted production and human editing to make product stories, UGC-style ads and short-form campaigns. Explore selected work, compare production packages and tell us what your brand needs.</p>
+      <div class="flex flex-wrap gap-3">
+        <a href="ai-studio.html#work" class="btn btn-primary btn-sm">View selected work <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+        <a href="ai-studio.html#packages" class="btn btn-outline btn-sm">See packages <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+    </div>
+    <a href="ai-studio.html#work" class="grid grid-cols-2 gap-2 rounded-2xl overflow-hidden border border-slate-200 shadow-lg" aria-label="Explore Ads Creative video portfolio">
+      <img src="assets/media/alctic.jpg" alt="Corporate AI UGC video frame" class="w-full h-48 sm:h-56 object-cover">
+      <img src="assets/media/lumiva.jpg" alt="Lumiva consumer product video frame" class="w-full h-48 sm:h-56 object-cover">
+      <img src="assets/media/indifi.jpg" alt="Indifi finance story video frame" class="w-full h-48 sm:h-56 object-cover">
+      <img src="assets/media/creator-montage.jpg" alt="Creator short-form montage frame" class="w-full h-48 sm:h-56 object-cover">
+    </a>
+  </div>
+</section>
+
+<!-- 3. AI ANNOTATION -->
+<section id="ai-annotation-service" class="ctx-white py-20 border-b border-slate-100">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+      <div class="space-y-6">
+        <div class="section-index-dark">03 — Data Operations &amp; Training Datasets</div>
+        <span class="chip chip-light-cobalt">[SYS.03] AI Annotation · 99.8% QA SLA</span>
+        <h2 class="t-headline text-[clamp(1.6rem,3vw,2.6rem)] text-slate-900">
+          High-Precision <span class="text-cobalt">AI Annotation Services</span>
+        </h2>
+        <p class="font-body text-slate-600 text-sm leading-relaxed">
+          State-of-the-art vision and language models require flawless ground truth. Renext combines <strong>Active Learning Pre-Annotation</strong> with certified <strong>Human-in-the-Loop (HITL)</strong> domain specialists to deliver high-quality training datasets with an ironclad <strong>99.8% QA SLA</strong>.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="font-display font-bold text-sm text-slate-900 mb-1">1. Computer Vision (2D/3D)</div>
+            <p class="text-slate-500 text-[11px] leading-relaxed">Bounding boxes, polygon segmentation, keypoint tracking, and LiDAR point clouds.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="font-display font-bold text-sm text-slate-900 mb-1">2. NLP &amp; Speech Diarization</div>
+            <p class="text-slate-500 text-[11px] leading-relaxed">Named Entity Recognition, intent classification, and multilingual transcription.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="font-display font-bold text-sm text-slate-900 mb-1">3. GenAI RLHF &amp; Red-Teaming</div>
+            <p class="text-slate-500 text-[11px] leading-relaxed">Prompt-response evaluation, human preference ranking, and safety audit red-teaming.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+            <div class="font-display font-bold text-sm text-slate-900 mb-1">4. 99.8% QA SLA Guarantee</div>
+            <p class="text-slate-500 text-[11px] leading-relaxed">Active learning pre-labels paired with certified multi-tier human reviewers.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-sm">Start Annotation Project <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+
+      <!-- Interactive Annotation Canvas -->
+      <div class="bg-[#080B14] text-white rounded-2xl p-6 border border-white/[0.08] shadow-2xl space-y-4">
+        <div class="flex items-center justify-between border-b border-white/[0.08] pb-3">
+          <div class="flex items-center gap-2">
+            <i data-lucide="crosshair" class="w-4 h-4 text-blue-400"></i>
+            <h3 class="font-display font-bold text-sm">Interactive Annotation Canvas</h3>
+          </div>
+          <button id="clear-annotation-btn" class="font-mono text-[10px] text-slate-300 hover:text-white px-2.5 py-1 rounded bg-slate-900 border border-slate-700">Clear</button>
+        </div>
+        <div class="flex items-center gap-2 text-xs font-mono">
+          <span class="text-slate-400">Class:</span>
+          <select id="annotation-class-select" class="bg-slate-900 text-white text-xs p-1.5 rounded border border-slate-700">
+            <option value="Vehicle">Vehicle</option>
+            <option value="Pedestrian">Pedestrian</option>
+            <option value="Traffic Signal">Traffic Signal</option>
+            <option value="Obstacle / Road Damage">Obstacle</option>
+            <option value="Retail SKU Item">Retail SKU</option>
+          </select>
+          <span id="annotation-count-badge" class="text-[10px] font-mono text-blue-400 ml-auto bg-blue-500/10 px-2 py-1 rounded border border-blue-500/20">3 Active Boxes</span>
+        </div>
+        <div class="bg-slate-900 p-2 rounded-xl border border-white/[0.08]">
+          <canvas id="annotationCanvas" width="560" height="280" class="w-full h-auto rounded-lg"></canvas>
+        </div>
+        <pre id="annotation-json" class="p-3 bg-slate-900/90 text-[10px] font-mono text-slate-300 rounded-xl h-28 overflow-y-auto leading-relaxed border border-white/[0.08]"></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. CLOUD & FINOPS -->
+<section id="cloud-finops" class="atm-subtle py-20 border-b border-slate-200">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+      <div class="space-y-6">
+        <div class="section-index-dark">04 — Resilient Infrastructure &amp; FinOps</div>
+        <span class="chip chip-light-cobalt">[SYS.04] Cloud &amp; FinOps · 30%+ Savings</span>
+        <h2 class="t-headline text-[clamp(1.6rem,3vw,2.6rem)] text-slate-900">
+          Cloud Services &amp; <span class="text-cobalt">FinOps Optimisation</span>
+        </h2>
+        <p class="font-body text-slate-600 text-sm leading-relaxed">
+          Architect, migrate, and govern multi-cloud environments across <strong>AWS, Google Cloud (GCP), and Microsoft Azure</strong>. Renext engineers fault-tolerant cloud infrastructures while implementing aggressive <strong>FinOps cost controls</strong> that consistently cut monthly cloud spend by 28–42%.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+          <div class="p-4 rounded-xl bg-white border border-slate-200">
+            <div class="font-display font-bold text-sm text-slate-900 mb-1">1. Zero-Downtime Migration</div>
+            <p class="text-slate-500 text-[11px]">Re-architecting legacy monoliths into Kubernetes (EKS, GKE, AKS) microservices.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white border border-slate-200">
+            <div class="font-display font-bold text-sm text-slate-900 mb-1">2. Infrastructure as Code</div>
+            <p class="text-slate-500 text-[11px]">Automated Terraform and Pulumi templates with GitOps CI/CD delivery pipelines.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white border border-slate-200">
+            <div class="font-display font-bold text-sm text-slate-900 mb-1">3. 30%+ FinOps Savings</div>
+            <p class="text-slate-500 text-[11px]">Continuous rightsizing, spot orchestration, and automated idle waste reclamation.</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white border border-slate-200">
+            <div class="font-display font-bold text-sm text-slate-900 mb-1">4. 24/7 SRE &amp; Observability</div>
+            <p class="text-slate-500 text-[11px]">Telemetry aggregation, distributed tracing, and proactive SLO incident response.</p>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-sm">Request Cloud Audit <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+
+      <!-- FinOps Calculator -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-lg space-y-5">
+        <div class="text-center space-y-1">
+          <span class="chip chip-light-cobalt text-[9px]">[ESTIMATOR] Cloud ROI</span>
+          <h3 class="font-display font-bold text-xl text-slate-900 mt-2">Calculate Your Cloud Bill Reduction</h3>
+          <p class="font-body text-xs text-slate-500">Estimate how much Renext FinOps engineering can save your organisation.</p>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between text-xs font-bold text-slate-700 mb-2">
+              <span>Monthly Cloud Spend:</span>
+              <span id="cloud-spend-display" class="font-mono text-blue-600 text-sm font-black">₹2,50,000</span>
+            </div>
+            <input id="cloud-spend-slider" type="range" min="50000" max="2500000" step="25000" value="250000" class="finops-slider">
+          </div>
+          <div class="grid grid-cols-2 gap-3 pt-2">
+            <div class="p-4 rounded-xl bg-blue-50 border border-blue-100 text-center">
+              <p class="font-mono text-[10px] font-semibold text-slate-500 uppercase">Monthly Savings</p>
+              <p id="cloud-monthly-savings" class="text-xl font-black text-blue-600 font-mono mt-0.5">₹80,000/mo</p>
+              <p id="cloud-reduction-pct" class="text-[10px] font-bold text-emerald-600 mt-0.5">32% Cost Reduction</p>
+            </div>
+            <div class="p-4 rounded-xl bg-emerald-50 border border-emerald-100 text-center">
+              <p class="font-mono text-[10px] font-semibold text-slate-500 uppercase">Annual Savings</p>
+              <p id="cloud-annual-savings" class="text-xl font-black text-emerald-600 font-mono mt-0.5">₹9,60,000</p>
+              <p class="text-[10px] font-bold text-slate-600 mt-0.5">Direct P&amp;L Impact</p>
+            </div>
+          </div>
+          <a href="contact.html" class="btn btn-primary w-full justify-center text-xs">
+            Request Cloud Architecture &amp; FinOps Audit <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SpendItWisely Banner -->
+<section class="ctx-dark py-14 border-y border-emerald-500/20">
+  <div class="container flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="flex items-center gap-4">
+      <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-2xl shrink-0">🚀</div>
+      <div>
+        <div class="chip chip-mint mb-1 inline-flex text-[9px]">Our Flagship Startup Initiative</div>
+        <h3 class="font-display font-black text-lg text-white">SpendItWisely — Consumer Spending &amp; Kirana Rewards</h3>
+        <p class="font-body text-xs text-slate-400 max-w-xl mt-1">See how Renext's OCR, data parsing, and reward architecture power our in-house consumer fintech startup.</p>
+      </div>
+    </div>
+    <a href="spenditwisely.html" class="btn btn-mint whitespace-nowrap">Explore SpendItWisely <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+  </div>
+</section>
+
+<!-- 5. CUSTOM SOFTWARE -->
+<section id="custom-software" class="ctx-white py-20">
+  <div class="container">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="section-index-dark mb-4">05 — Full Portfolio</div>
+      <h2 class="t-headline text-[clamp(1.6rem,3vw,2.6rem)] text-slate-900">Specialised Engineering Capabilities</h2>
+      <p class="font-body text-slate-500 text-sm mt-3">Proven capabilities across web, mobile, automation, and enterprise integrations.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+      <div class="p-5 rounded-xl border border-slate-200 bg-white hover:border-blue-200 hover:shadow-md transition-all space-y-2"><div class="font-display font-bold text-xs text-slate-900">Web App Development</div><p class="text-[11px] text-slate-500">Fast, accessible, modern web apps built with responsive component architectures.</p></div>
+      <div class="p-5 rounded-xl border border-slate-200 bg-white hover:border-blue-200 hover:shadow-md transition-all space-y-2"><div class="font-display font-bold text-xs text-slate-900">Mobile App Development</div><p class="text-[11px] text-slate-500">Cross-platform iOS and Android apps with native device integration and offline sync.</p></div>
+      <div class="p-5 rounded-xl border border-slate-200 bg-white hover:border-blue-200 hover:shadow-md transition-all space-y-2"><div class="font-display font-bold text-xs text-slate-900">Ecommerce &amp; Marketplaces</div><p class="text-[11px] text-slate-500">Asset-light multi-vendor portals, catalog indexing, and order management engines.</p></div>
+      <div class="p-5 rounded-xl border border-slate-200 bg-white hover:border-blue-200 hover:shadow-md transition-all space-y-2"><div class="font-display font-bold text-xs text-slate-900">UI/UX &amp; Product Design</div><p class="text-[11px] text-slate-500">Design systems, interactive prototypes, and usability testing for practical flows.</p></div>
+      <div class="p-5 rounded-xl border border-slate-200 bg-white hover:border-blue-200 hover:shadow-md transition-all space-y-2"><div class="font-display font-bold text-xs text-slate-900">Cloud &amp; Backend Systems</div><p class="text-[11px] text-slate-500">Scalable REST/GraphQL APIs, microservices, and high-concurrency database clusters.</p></div>
+      <div class="p-5 rounded-xl border border-slate-200 bg-white hover:border-blue-200 hover:shadow-md transition-all space-y-2"><div class="font-display font-bold text-xs text-slate-900">API &amp; System Integration</div><p class="text-[11px] text-slate-500">Connecting payment gateways, ERPs, CRM databases, and legacy systems.</p></div>
+      <div class="p-5 rounded-xl border border-slate-200 bg-white hover:border-blue-200 hover:shadow-md transition-all space-y-2"><div class="font-display font-bold text-xs text-slate-900">Business Automation</div><p class="text-[11px] text-slate-500">Digitising repetitive paper tasks, document ingestion, and automated alerts.</p></div>
+      <div class="p-5 rounded-xl border border-slate-200 bg-white hover:border-blue-200 hover:shadow-md transition-all space-y-2"><div class="font-display font-bold text-xs text-slate-900">Data &amp; Analytics</div><p class="text-[11px] text-slate-500">Data pipelines, telemetry aggregation, reporting dashboards, and operational metrics.</p></div>
+      <div class="p-5 rounded-xl border border-slate-200 bg-white hover:border-blue-200 hover:shadow-md transition-all space-y-2"><div class="font-display font-bold text-xs text-slate-900">Digital Product Delivery</div><p class="text-[11px] text-slate-500">Full lifecycle product engineering from MVP validation to production scaling.</p></div>
+      <div class="p-5 rounded-xl border border-slate-200 bg-white hover:border-blue-200 hover:shadow-md transition-all space-y-2"><div class="font-display font-bold text-xs text-slate-900">Custom Software Engineering</div><p class="text-[11px] text-slate-500">Tailored business software architected to precise technical and security specifications.</p></div>
+    </div>
+    <div class="mt-10 text-center">
+      <a href="contact.html" class="btn btn-primary">Schedule an Engineering Consultation <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer pt-16 pb-10">
+  <div class="container">
+    <div class="pb-10 border-b border-white/[0.06] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <div class="flex items-center gap-3 mb-2"><div class="nav-logo-r">R</div><span class="font-display font-black text-base text-white">RENEXT TECHNOLOGIES PVT. LTD.</span></div>
+        <p class="font-body text-xs text-slate-500 max-w-md">Engineering enterprise digital systems, AI pipelines, and incubating <span class="text-emerald-400">SpendItWisely</span>.</p>
+      </div>
+      <a href="contact.html" class="btn btn-primary btn-sm">Get In Touch <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 py-12 border-b border-white/[0.06]">
+      <div class="col-span-2 md:col-span-1 space-y-3">
+        <div class="footer-heading">About</div>
+        <p class="font-body text-xs text-slate-500 leading-relaxed">Renext Technologies operates at the intersection of enterprise software automation, AI pipelines, and consumer financial intelligence.</p>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/[0.03] border border-white/[0.06] font-mono text-[10px] text-slate-400"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse"></span>Flagship Lab: SpendItWisely</div>
+      </div>
+      <div class="space-y-2.5">
+        <div class="footer-heading">Navigate</div>
+        <ul class="space-y-2">
+          <li><a href="index.html"         class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Home</a></li>
+          <li><a href="about.html"         class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> About Renext</a></li>
+          <li><a href="services.html"      class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Services</a></li>
+          <li><a href="spenditwisely.html" class="footer-link footer-link-mint"><i data-lucide="chevron-right" class="w-3 h-3 text-emerald-500"></i> SpendItWisely</a></li>
+          <li><a href="ai-studio.html"     class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Ads Creative</a></li>
+          <li><a href="contact.html"       class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="space-y-2.5">
+        <div class="footer-heading">Solutions</div>
+        <ul class="space-y-2">
+          <li><a href="#ap-service"              class="footer-link"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> AP OCR Automation</a></li>
+          <li><a href="ai-studio.html"           class="footer-link"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Ads Creative · Video Ads</a></li>
+          <li><a href="#ai-annotation-service"   class="footer-link"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> AI Data Annotation</a></li>
+          <li><a href="#cloud-finops"            class="footer-link"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Cloud &amp; FinOps</a></li>
+          <li><a href="spenditwisely.html"       class="footer-link footer-link-mint"><i data-lucide="sparkles" class="w-3 h-3 text-emerald-500"></i> SpendItWisely Kirana</a></li>
+        </ul>
+      </div>
+      <div class="space-y-3">
+        <div class="footer-heading">Contact</div>
+        <div class="space-y-2 font-body text-xs text-slate-500">
+          <div class="flex items-start gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-500 shrink-0 mt-0.5"></i><span>1069, Ward No.-5, Khera, Rudrapur, Kichha, Udham Singh Nagar – 263153, Uttarakhand, India</span></div>
+          <a href="tel:+919548492221" class="flex items-center gap-2 hover:text-blue-400 transition-colors font-mono text-[11px]"><i data-lucide="phone" class="w-3.5 h-3.5 text-blue-500"></i>+91 9548492221</a>
+          <a href="mailto:info@renexttechnologies.com" class="flex items-center gap-2 hover:text-blue-400 transition-colors font-mono text-[11px]"><i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i>info@renexttechnologies.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-[10px] text-slate-600">
+      <span>© 2026 Renext Technologies Pvt. Ltd. All rights reserved.</span>
+      <span class="text-emerald-500 font-body text-xs">Flagship Startup: <strong>SpendItWisely™</strong></span>
+      <div class="flex gap-4"><a href="about.html" class="hover:text-slate-300">About</a><a href="services.html" class="hover:text-slate-300">Services</a><a href="contact.html" class="hover:text-slate-300">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  // Nav
+  document.getElementById('nav-toggle')?.addEventListener('click',()=>document.getElementById('mobile-drawer')?.classList.toggle('hidden'));
+  window.addEventListener('scroll',()=>document.getElementById('main-nav')?.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+
+  // AP Simulator
+  const apData={cloud:{vendor:'Apex Cloud Systems Ltd',gstin:'07AAACA1234F1Z9',ref:'INV-2026-0982',po:'PO-88421 (100% Matched)',total:'₹1,71,100.00'},hardware:{vendor:'NexGen Compute & Peripherals',gstin:'27BBBCA5678G2Z1',ref:'INV-2026-1104',po:'PO-88428 (100% Matched)',total:'₹4,48,400.00'},consulting:{vendor:'Enterprise DevOps Advisers',gstin:'06CCCCA9012H3Z5',ref:'INV-2026-0422',po:'PO-88435 (100% Matched)',total:'₹1,12,100.00'}};
+  const sel=document.getElementById('ap-invoice-select');
+  const runBtn=document.getElementById('ap-run-btn');
+  const approveBtn=document.getElementById('ap-approve-btn');
+  function updateAP(){const d=apData[sel?.value]||apData.cloud;document.getElementById('ap-vendor-name').textContent=d.vendor;document.getElementById('ap-gstin').textContent=d.gstin;document.getElementById('ap-invoice-no').textContent=d.ref;document.getElementById('ap-po-match').textContent=d.po;document.getElementById('ap-total').textContent=d.total;}
+  sel?.addEventListener('change',updateAP);
+  runBtn?.addEventListener('click',()=>{runBtn.innerHTML='<span>Scanning Line Items...</span>';setTimeout(()=>{updateAP();runBtn.innerHTML='<span>✓ 3-Way Matched Successfully</span>';if(window.lucide)lucide.createIcons();},600);});
+  approveBtn?.addEventListener('click',()=>alert('Invoice Approved! Dispatched to Bank ERP for instant batch disbursement.'));
+
+  // Annotation Canvas
+  const canvas=document.getElementById('annotationCanvas');
+  if(canvas&&canvas.getContext){
+    const ctx=canvas.getContext('2d');
+    const boxes=[{class:'Vehicle',x:60,y:80,w:180,h:110,color:'#38bdf8'},{class:'Pedestrian',x:280,y:50,w:70,h:160,color:'#a855f7'},{class:'Traffic Signal',x:420,y:30,w:50,h:100,color:'#34d399'}];
+    function draw(){
+      ctx.fillStyle='#090d16';ctx.fillRect(0,0,canvas.width,canvas.height);
+      ctx.strokeStyle='#1e293b';ctx.lineWidth=1;
+      for(let x=0;x<canvas.width;x+=40){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,canvas.height);ctx.stroke();}
+      for(let y=0;y<canvas.height;y+=40){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(canvas.width,y);ctx.stroke();}
+      boxes.forEach(b=>{ctx.strokeStyle=b.color;ctx.lineWidth=2;ctx.strokeRect(b.x,b.y,b.w,b.h);ctx.fillStyle=b.color+'22';ctx.fillRect(b.x,b.y,b.w,b.h);ctx.fillStyle=b.color;ctx.font='bold 11px JetBrains Mono,monospace';ctx.fillText(b.class,b.x+4,b.y-4);});
+      const pre=document.getElementById('annotation-json');if(pre)pre.textContent=JSON.stringify(boxes,null,2);
+      const badge=document.getElementById('annotation-count-badge');if(badge)badge.textContent=boxes.length+' Active Boxes';
+    }
+    draw();
+    document.getElementById('clear-annotation-btn')?.addEventListener('click',()=>{boxes.length=0;draw();});
+  }
+
+  // FinOps
+  const slider=document.getElementById('cloud-spend-slider');
+  if(slider){function calc(){const v=parseInt(slider.value,10);const d=document.getElementById('cloud-spend-display');if(d)d.textContent='₹'+v.toLocaleString('en-IN');const ms=Math.round(v*0.32);const as=ms*12;const m=document.getElementById('cloud-monthly-savings');const p=document.getElementById('cloud-reduction-pct');const a=document.getElementById('cloud-annual-savings');if(m)m.textContent='₹'+ms.toLocaleString('en-IN')+'/mo';if(p)p.textContent='32% Cost Reduction';if(a)a.textContent='₹'+as.toLocaleString('en-IN');}slider.addEventListener('input',calc);calc();}
+
+  if(window.lucide)lucide.createIcons();
+})();
+</script>
+</body>
+</html>

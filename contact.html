@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Renext Technologies Pvt. Ltd.</title>
+  <meta name="description" content="Get in touch with Renext Technologies. Enterprise software services, Ads Creative, and SpendItWisely partnership inquiries.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-r.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['Inter','sans-serif'],body:['Inter','sans-serif'],mono:['JetBrains Mono','monospace']}}}}</script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#F4F6FB]">
+
+<!-- TOP BAR -->
+<div class="site-topbar">
+  <div class="container flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-2">
+      <span class="dot-pulse bg-emerald-400"></span>
+      <span class="text-slate-300 font-semibold tracking-wide">RENEXT TECHNOLOGIES PVT. LTD.</span>
+      <span class="text-slate-700 mx-1">|</span>
+      <span class="text-slate-500">Direct Contact &amp; Inquiries</span>
+    </div>
+    <a href="tel:+919548492221" class="flex items-center gap-1.5 hover:text-blue-400 transition-colors">
+      <i data-lucide="phone" class="w-3 h-3 text-blue-400"></i><span>+91 9548492221</span>
+    </a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="site-nav" id="main-nav">
+  <div class="container flex items-center justify-between h-[68px]">
+    <a href="index.html" class="flex items-center gap-3" aria-label="Renext Technologies home">
+        <span class="nav-logo-r" aria-hidden="true"></span>
+        <span class="renext-nav-name"><strong>Renext</strong><small>Technologies Pvt Ltd</small></span>
+      </a>
+    <div class="hidden xl:flex items-center gap-7">
+      <a href="index.html"          class="nav-link">Home</a>
+      <a href="about.html"          class="nav-link">About</a>
+      <a href="services.html"       class="nav-link">Services</a>
+      <a href="spenditwisely.html"  class="nav-link-mint flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span>SpendItWisely</a>
+      <a href="ai-studio.html"      class="nav-link">Ads Creative</a>
+      <a href="contact.html"        class="nav-link active">Contact</a>
+    </div>
+    <div class="hidden xl:flex items-center gap-2.5">
+      <a href="tel:+919548492221"  class="btn btn-sm btn-primary"><i data-lucide="phone" class="w-3 h-3"></i> Call Now</a>
+      <a href="services.html"      class="btn btn-sm btn-ghost">Services</a>
+    </div>
+    <button id="nav-toggle" class="xl:hidden p-2 rounded-lg text-slate-400 hover:text-white">
+      <i data-lucide="menu" class="w-5 h-5"></i>
+    </button>
+  </div>
+  <div id="mobile-drawer" class="hidden xl:hidden border-t border-white/5">
+    <div class="container py-4 space-y-1">
+      <a href="index.html"         class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Home</a>
+      <a href="about.html"         class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">About</a>
+      <a href="services.html"      class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Services</a>
+      <a href="spenditwisely.html" class="block py-2.5 px-3 rounded-lg text-emerald-400 font-semibold text-sm hover:bg-emerald-900/20">SpendItWisely</a>
+      <a href="ai-studio.html"     class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Ads Creative</a>
+      <a href="contact.html"       class="block py-2.5 px-3 rounded-lg text-white font-semibold text-sm bg-white/5">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="atm-hero py-24">
+  <div class="container relative z-10">
+    <div class="max-w-3xl">
+      <div class="reveal-1 inline-flex items-center gap-2 mb-6">
+        <span class="chip chip-cobalt"><i data-lucide="message-circle" class="w-3 h-3"></i> Direct Contact &amp; Inquiries</span>
+      </div>
+      <h1 class="reveal-2 t-headline text-[clamp(2rem,5vw,4rem)] text-white mb-6">
+        Let's Build Something <span class="text-gradient-cobalt">Together</span>
+      </h1>
+      <p class="reveal-3 font-body text-slate-400 text-base leading-relaxed max-w-2xl mb-10 font-light">
+        Whether you need enterprise automation, cloud architecture, AI annotation services, or want to explore partnership opportunities with SpendItWisely — we're ready to listen.
+      </p>
+      <div class="reveal-4 flex flex-wrap gap-3">
+        <a href="mailto:info@renexttechnologies.com" class="btn btn-primary btn-lg">
+          <i data-lucide="mail" class="w-4 h-4"></i> Email Us
+        </a>
+        <a href="tel:+919548492221" class="btn btn-ghost btn-lg">
+          <i data-lucide="phone" class="w-4 h-4 text-blue-400"></i> +91 9548492221
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTACT SECTION -->
+<section class="ctx-white py-24">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+
+      <!-- Left: Contact Info -->
+      <div class="space-y-6">
+        <div class="section-index-dark">01 — Direct Channels</div>
+        <h2 class="t-headline text-[clamp(1.6rem,3vw,2.6rem)] text-slate-900">Reach Our <span class="text-cobalt">Team</span></h2>
+
+        <div class="space-y-4">
+          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-4 hover:border-blue-200 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0">
+              <i data-lucide="phone" class="w-5 h-5 text-blue-600"></i>
+            </div>
+            <div>
+              <div class="t-label text-slate-500 mb-1">Call Us Directly</div>
+              <a href="tel:+919548492221" class="font-mono font-black text-2xl text-blue-700 hover:text-blue-800 transition-colors">+91 9548492221</a>
+              <div class="font-mono text-[10px] text-slate-400 mt-1">Mon–Sat · 10 AM – 6 PM IST</div>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-4 hover:border-blue-200 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0">
+              <i data-lucide="mail" class="w-5 h-5 text-blue-600"></i>
+            </div>
+            <div>
+              <div class="t-label text-slate-500 mb-1">Email Inquiry</div>
+              <a href="mailto:info@renexttechnologies.com" class="font-mono font-bold text-sm text-blue-700 hover:text-blue-800 transition-colors">info@renexttechnologies.com</a>
+              <div class="font-mono text-[10px] text-slate-400 mt-1">Reply within 24 business hours</div>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 flex items-start gap-4 hover:border-blue-200 transition-all">
+            <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center shrink-0">
+              <i data-lucide="map-pin" class="w-5 h-5 text-blue-600"></i>
+            </div>
+            <div>
+              <div class="t-label text-slate-500 mb-1">Registered Office</div>
+              <div class="font-body text-sm text-slate-700 leading-relaxed">1069, Ward No.-5, Khera, Rudrapur, Kichha,<br>Udham Singh Nagar – 263153, Uttarakhand, India</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SpendItWisely Partnership card -->
+        <div class="p-5 rounded-xl border border-emerald-200 bg-emerald-50 flex items-start gap-4">
+          <div class="text-2xl shrink-0">🚀</div>
+          <div>
+            <div class="font-display font-bold text-sm text-emerald-800 mb-1">SpendItWisely Partnership</div>
+            <div class="font-body text-xs text-emerald-700 mb-3">For kirana partner registration, consumer app waitlist, or startup collaboration inquiries.</div>
+            <a href="spenditwisely.html#kirana-store" class="btn btn-mint btn-sm">SpendItWisely Info <i data-lucide="arrow-right" class="w-3 h-3"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Contact Form -->
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <div class="mb-6">
+          <h3 class="font-display font-bold text-xl text-slate-900 mb-1">Send Us a Message</h3>
+          <p class="font-body text-xs text-slate-500">We typically respond within 24 business hours.</p>
+        </div>
+        <form id="contact-form" class="space-y-5" novalidate>
+          <div>
+            <label for="cf-name" class="form-label">Your Name</label>
+            <input id="cf-name" name="name" type="text" class="form-input" placeholder="Full name" required>
+          </div>
+          <div>
+            <label for="cf-email" class="form-label">Email Address</label>
+            <input id="cf-email" name="email" type="email" class="form-input" placeholder="you@company.com" required>
+          </div>
+          <div>
+            <label for="cf-phone" class="form-label">Phone (Optional)</label>
+            <input id="cf-phone" name="phone" type="tel" class="form-input" placeholder="+91 98XXXXXXXX">
+          </div>
+          <div>
+            <label for="cf-subject" class="form-label">Inquiry Type</label>
+            <select id="cf-subject" name="subject" class="form-input">
+              <option value="">Select a service...</option>
+              <option>Account Payable Automation</option>
+              <option>Ads Creative — Video Ads & Packages</option>
+              <option>AI Data Annotation</option>
+              <option>Cloud &amp; FinOps</option>
+              <option>SpendItWisely Partnership</option>
+              <option>Custom Software Engineering</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="cf-message" class="form-label">Message</label>
+            <textarea id="cf-message" name="message" rows="4" class="form-input resize-none" placeholder="Describe your requirement or question…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-full justify-center">
+            Send Message <i data-lucide="send" class="w-4 h-4"></i>
+          </button>
+        </form>
+        <p class="font-mono text-[10px] text-slate-400 text-center mt-4">Your data is never sold to third parties.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="atm-subtle py-20">
+  <div class="container text-center max-w-2xl mx-auto space-y-4">
+    <div class="section-index-dark mb-2">02 — Location</div>
+    <h2 class="t-headline text-[clamp(1.6rem,3vw,2.4rem)] text-slate-900">Our Registered Office</h2>
+    <div class="p-6 rounded-2xl border border-slate-200 bg-white text-left space-y-3 max-w-lg mx-auto">
+      <div class="flex items-start gap-3">
+        <i data-lucide="building" class="w-5 h-5 text-blue-500 shrink-0 mt-0.5"></i>
+        <div>
+          <div class="font-display font-bold text-sm text-slate-900">Renext Technologies Pvt. Ltd.</div>
+          <div class="font-body text-xs text-slate-500 mt-1 leading-relaxed">1069, Ward No.-5, Khera, Rudrapur, Kichha<br>Udham Singh Nagar – 263153<br>Uttarakhand, India</div>
+        </div>
+      </div>
+      <div class="hairline-light"></div>
+      <div class="flex flex-wrap gap-4 font-mono text-[11px] text-slate-500">
+        <span><strong class="text-slate-700">State:</strong> Uttarakhand</span>
+        <span><strong class="text-slate-700">Country:</strong> India</span>
+        <span><strong class="text-slate-700">PIN:</strong> 263153</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer pt-16 pb-10">
+  <div class="container">
+    <div class="pb-10 border-b border-white/[0.06] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <div class="flex items-center gap-3 mb-2"><div class="nav-logo-r">R</div><span class="font-display font-black text-base text-white">RENEXT TECHNOLOGIES PVT. LTD.</span></div>
+        <p class="font-body text-xs text-slate-500 max-w-md">Engineering enterprise digital systems, AI pipelines, and incubating <span class="text-emerald-400">SpendItWisely</span>.</p>
+      </div>
+      <a href="tel:+919548492221" class="btn btn-primary btn-sm"><i data-lucide="phone" class="w-3.5 h-3.5"></i> +91 9548492221</a>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 py-12 border-b border-white/[0.06]">
+      <div class="col-span-2 md:col-span-1 space-y-3">
+        <div class="footer-heading">About</div>
+        <p class="font-body text-xs text-slate-500 leading-relaxed">Renext Technologies operates at the intersection of enterprise software automation, AI pipelines, and consumer financial intelligence.</p>
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/[0.03] border border-white/[0.06] font-mono text-[10px] text-slate-400"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse"></span>Flagship Lab: SpendItWisely</div>
+      </div>
+      <div class="space-y-2.5">
+        <div class="footer-heading">Navigate</div>
+        <ul class="space-y-2">
+          <li><a href="index.html"         class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Home</a></li>
+          <li><a href="about.html"         class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> About Renext</a></li>
+          <li><a href="services.html"      class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Services</a></li>
+          <li><a href="spenditwisely.html" class="footer-link footer-link-mint"><i data-lucide="chevron-right" class="w-3 h-3 text-emerald-500"></i> SpendItWisely</a></li>
+          <li><a href="ai-studio.html"     class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Ads Creative</a></li>
+          <li><a href="contact.html"       class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="space-y-2.5">
+        <div class="footer-heading">Solutions</div>
+        <ul class="space-y-2">
+          <li><a href="services.html#ap-service"              class="footer-link"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> AP OCR Automation</a></li>
+          <li><a href="ai-studio.html"                        class="footer-link"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Ads Creative · Video Ads</a></li>
+          <li><a href="services.html#ai-annotation-service"   class="footer-link"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> AI Data Annotation</a></li>
+          <li><a href="services.html#cloud-finops"            class="footer-link"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Cloud &amp; FinOps</a></li>
+          <li><a href="spenditwisely.html"                    class="footer-link footer-link-mint"><i data-lucide="sparkles" class="w-3 h-3 text-emerald-500"></i> SpendItWisely</a></li>
+        </ul>
+      </div>
+      <div class="space-y-3">
+        <div class="footer-heading">Contact</div>
+        <div class="space-y-2 font-body text-xs text-slate-500">
+          <div class="flex items-start gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-500 shrink-0 mt-0.5"></i><span>1069, Ward No.-5, Khera, Rudrapur, Kichha, Udham Singh Nagar – 263153, Uttarakhand, India</span></div>
+          <a href="tel:+919548492221" class="flex items-center gap-2 hover:text-blue-400 transition-colors font-mono text-[11px]"><i data-lucide="phone" class="w-3.5 h-3.5 text-blue-500"></i>+91 9548492221</a>
+          <a href="mailto:info@renexttechnologies.com" class="flex items-center gap-2 hover:text-blue-400 transition-colors font-mono text-[11px]"><i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i>info@renexttechnologies.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-[10px] text-slate-600">
+      <span>© 2026 Renext Technologies Pvt. Ltd. All rights reserved.</span>
+      <span class="text-emerald-500 font-body text-xs">Flagship Startup: <strong>SpendItWisely™</strong></span>
+      <div class="flex gap-4"><a href="about.html" class="hover:text-slate-300">About</a><a href="services.html" class="hover:text-slate-300">Services</a><a href="contact.html" class="hover:text-slate-300">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  document.getElementById('nav-toggle')?.addEventListener('click',()=>document.getElementById('mobile-drawer')?.classList.toggle('hidden'));
+  window.addEventListener('scroll',()=>document.getElementById('main-nav')?.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+  const form=document.getElementById('contact-form');
+  if(form){form.addEventListener('submit',function(e){
+    e.preventDefault();
+    const btn=form.querySelector('button[type="submit"]');
+    if(btn){btn.disabled=true;btn.innerHTML='Sending…';}
+    setTimeout(()=>{
+      if(btn){btn.disabled=false;btn.innerHTML='Send Message <span class="ml-1">→</span>';}
+      form.reset();
+      alert('Message sent! We will contact you within 24 business hours.');
+    },900);
+  });}
+  if(window.lucide)lucide.createIcons();
+})();
+</script>
+</body>
+</html>

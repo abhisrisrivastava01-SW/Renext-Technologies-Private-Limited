@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Renext Technologies Pvt. Ltd.</title>
+  <meta name="description" content="Renext Technologies Pvt. Ltd. — Indian technology company engineering enterprise automation, AI platforms, and incubating SpendItWisely, our flagship consumer startup.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-r.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['Inter','sans-serif'],body:['Inter','sans-serif'],mono:['JetBrains Mono','monospace']}}}}</script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-[#F4F6FB]">
+
+  <!-- TOP BAR -->
+  <div class="site-topbar">
+    <div class="container flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="dot-pulse bg-emerald-400"></span>
+        <span class="text-slate-300 font-semibold tracking-wide">RENEXT TECHNOLOGIES PVT. LTD.</span>
+        <span class="text-slate-700 mx-1">|</span>
+        <span class="text-slate-500">Startup Lab: <strong class="text-emerald-400">SpendItWisely</strong></span>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="tel:+919548492221" class="flex items-center gap-1.5 hover:text-blue-400 transition-colors">
+          <i data-lucide="phone" class="w-3 h-3 text-blue-400"></i><span>+91 9548492221</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="site-nav" id="main-nav">
+    <div class="container flex items-center justify-between h-[68px]">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Renext Technologies home">
+        <span class="nav-logo-r" aria-hidden="true"></span>
+        <span class="renext-nav-name"><strong>Renext</strong><small>Technologies Pvt Ltd</small></span>
+      </a>
+      <div class="hidden xl:flex items-center gap-7">
+        <a href="index.html"           class="nav-link">Home</a>
+        <a href="about.html"           class="nav-link active">About</a>
+        <a href="services.html"        class="nav-link">Services</a>
+        <a href="spenditwisely.html"   class="nav-link-mint flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span>SpendItWisely</a>
+        <a href="ai-studio.html"       class="nav-link">Ads Creative</a>
+        <a href="contact.html"         class="nav-link">Contact</a>
+      </div>
+      <div class="hidden xl:flex items-center gap-2.5">
+        <a href="services.html" class="btn btn-sm btn-primary">Services</a>
+        <a href="contact.html"  class="btn btn-sm btn-ghost">Contact Us</a>
+      </div>
+      <button id="nav-toggle" class="xl:hidden p-2 rounded-lg text-slate-400 hover:text-white">
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+    <div id="mobile-drawer" class="hidden xl:hidden border-t border-white/5">
+      <div class="container py-4 space-y-1">
+        <a href="index.html"           class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Home</a>
+        <a href="about.html"           class="block py-2.5 px-3 rounded-lg text-white font-semibold text-sm bg-white/5">About</a>
+        <a href="services.html"        class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Services</a>
+        <a href="spenditwisely.html"   class="block py-2.5 px-3 rounded-lg text-emerald-400 font-semibold text-sm hover:bg-emerald-900/20">SpendItWisely</a>
+        <a href="ai-studio.html"       class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Ads Creative</a>
+        <a href="contact.html"         class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="atm-hero py-28">
+    <div class="container relative z-10">
+      <div class="max-w-3xl">
+        <div class="reveal-1 inline-flex items-center gap-2 mb-6">
+          <span class="chip chip-cobalt"><i data-lucide="building" class="w-3 h-3"></i> Corporate Overview</span>
+        </div>
+        <h1 class="reveal-2 t-headline text-[clamp(2.2rem,5vw,4.2rem)] text-white mb-6">
+          Pioneering Practical Intelligence &amp; <br>
+          <span class="text-gradient-cobalt">Resilient Digital Systems</span>
+        </h1>
+        <p class="reveal-3 font-body text-slate-400 text-base leading-relaxed max-w-2xl font-light mb-8">
+          <strong class="text-white font-semibold">Renext Technologies Pvt. Ltd.</strong> is an Indian technology company engineering enterprise automation platforms, AI pipelines, and incubating high-impact consumer startups like <strong class="text-emerald-400">SpendItWisely</strong>.
+        </p>
+        <div class="reveal-4 flex flex-wrap gap-3">
+          <a href="services.html" class="btn btn-primary">Our Services <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          <a href="contact.html"  class="btn btn-ghost">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE ARE -->
+  <section class="ctx-white py-24">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+        <div class="space-y-5">
+          <div class="section-index-dark">01 — Who We Are</div>
+          <h2 class="t-headline text-[clamp(1.6rem,3vw,2.6rem)] text-slate-900">
+            An Engineering-First <span class="text-cobalt">Technology Company</span>
+          </h2>
+          <p class="font-body text-slate-600 text-sm leading-relaxed">
+            Renext Technologies Pvt. Ltd. is an Indian technology firm founded on the principle that modern software should eliminate operational bottlenecks rather than add complexity. Operating from our registered headquarters in Uttarakhand, our multidisciplinary team of software architects, data engineers, and product designers build software that balances robust backend engineering with intuitive consumer usability.
+          </p>
+          <p class="font-body text-slate-600 text-sm leading-relaxed">
+            We serve as both an enterprise technology partner for organizations modernizing their financial and cloud operations, and an active incubator of high-impact digital products.
+          </p>
+          <div class="flex items-center gap-2 font-mono text-xs text-slate-500 pt-1">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-500"></i>
+            <span>Headquartered in Rudrapur, Uttarakhand, India</span>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <div class="section-index-dark">02 — What We Build</div>
+          <h2 class="t-headline text-[clamp(1.6rem,3vw,2.6rem)] text-slate-900">
+            Enterprise Systems &amp; <span class="text-cobalt">Consumer Products</span>
+          </h2>
+          <div class="space-y-3">
+            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-blue-200 transition-all">
+              <div class="font-display font-bold text-sm text-slate-900 mb-1">Enterprise Automation &amp; AI</div>
+              <div class="font-body text-xs text-slate-500">Account Payable automation, AI annotation platforms, programmatic creative studios, and cloud FinOps systems for demanding B2B environments.</div>
+            </div>
+            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-emerald-200 transition-all">
+              <div class="font-display font-bold text-sm text-slate-900 mb-1">Consumer Product Incubation</div>
+              <div class="font-body text-xs text-slate-500">Building SpendItWisely — a spending-awareness and kirana rewards ecosystem for everyday Indian consumers.</div>
+            </div>
+            <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 hover:border-blue-200 transition-all">
+              <div class="font-display font-bold text-sm text-slate-900 mb-1">Custom Software Engineering</div>
+              <div class="font-body text-xs text-slate-500">Tailored web, mobile, and backend platforms architected to precise technical and security specifications for SMEs and enterprises.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSION & VALUES -->
+  <section class="atm-subtle py-20">
+    <div class="container">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <div class="section-index-dark mb-4">03 — Mission &amp; Values</div>
+        <h2 class="t-headline text-[clamp(1.6rem,3vw,2.6rem)] text-slate-900">
+          Principles We Engineer By
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center">
+            <i data-lucide="zap" class="w-5 h-5 text-blue-600"></i>
+          </div>
+          <div class="font-display font-bold text-sm text-slate-900">Operational Excellence</div>
+          <div class="font-body text-xs text-slate-500">We measure success in operational metrics — accuracy rates, uptime SLAs, cost reductions, and throughput numbers.</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center">
+            <i data-lucide="code-2" class="w-5 h-5 text-blue-600"></i>
+          </div>
+          <div class="font-display font-bold text-sm text-slate-900">Engineering Rigour</div>
+          <div class="font-body text-xs text-slate-500">Every system we build is architected to scale, tested for failure modes, and documented for handoff without knowledge loss.</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-emerald-200 hover:shadow-md transition-all space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center">
+            <i data-lucide="users" class="w-5 h-5 text-emerald-600"></i>
+          </div>
+          <div class="font-display font-bold text-sm text-slate-900">India-First Products</div>
+          <div class="font-body text-xs text-slate-500">SpendItWisely is built specifically for Indian consumption patterns, kirana commerce, and the UPI-first digital economy.</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 hover:border-blue-200 hover:shadow-md transition-all space-y-3">
+          <div class="w-10 h-10 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-5 h-5 text-blue-600"></i>
+          </div>
+          <div class="font-display font-bold text-sm text-slate-900">Transparency &amp; Trust</div>
+          <div class="font-body text-xs text-slate-500">No jargon-heavy proposals. Direct SLA commitments, clear pricing models, and honest project timelines.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPENDITWISELY CALLOUT -->
+  <section class="atm-mint py-24">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="space-y-6">
+          <div class="section-index">04 — Our Initiative Startup</div>
+          <div class="chip chip-mint inline-flex"><i data-lucide="rocket" class="w-3 h-3"></i> A Renext Technologies Startup</div>
+          <h2 class="t-headline text-[clamp(1.8rem,3.5vw,3rem)] text-white">
+            SpendItWisely — <span class="text-gradient-mint">Our Flagship Lab Project</span>
+          </h2>
+          <p class="font-body text-slate-400 text-sm leading-relaxed font-light">
+            Renext Technologies incubated SpendItWisely to address a real consumer need: helping everyday Indians understand where their money goes, digitize paper receipts, earn rewards, and support local kirana stores. Every technology capability we build — OCR, data pipelines, reward systems — gets stress-tested in SpendItWisely first.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="spenditwisely.html" class="btn btn-mint">Explore SpendItWisely <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 bg-white p-10 sm:p-16 shadow-lg flex flex-col items-start justify-center min-h-[280px]">
+          <img src="assets/images/logo-r.svg" alt="Renext Technologies Pvt Ltd" class="w-full max-w-[380px] h-auto">
+          <p class="text-slate-500 text-sm mt-8">Reimagine. Rebuild. Renext.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CTA -->
+  <section class="ctx-white py-20">
+    <div class="container text-center max-w-2xl mx-auto space-y-5">
+      <div class="section-index-dark">05 — Connect</div>
+      <h2 class="t-headline text-[clamp(1.6rem,3vw,2.6rem)] text-slate-900">
+        Ready to Work with Renext?
+      </h2>
+      <p class="font-body text-slate-500 text-sm leading-relaxed">
+        Whether you need enterprise automation, a dedicated engineering team, or want to explore partnership opportunities with SpendItWisely, we'd love to hear from you.
+      </p>
+      <div class="flex flex-wrap justify-center gap-3">
+        <a href="contact.html"          class="btn btn-primary">Contact Us <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <a href="tel:+919548492221"     class="btn btn-outline"><i data-lucide="phone" class="w-4 h-4"></i> +91 9548492221</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer pt-16 pb-10">
+    <div class="container">
+      <div class="pb-10 border-b border-white/[0.06] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <div class="flex items-center gap-3 mb-2">
+            <div class="nav-logo-r">R</div>
+            <span class="font-display font-black text-base text-white tracking-tight">RENEXT TECHNOLOGIES PVT. LTD.</span>
+          </div>
+          <p class="font-body text-xs text-slate-500 max-w-md">Engineering enterprise digital systems, AI automated pipelines, and incubating consumer startups like <span class="text-emerald-400">SpendItWisely</span>.</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary btn-sm">Get In Touch <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-10 py-12 border-b border-white/[0.06]">
+        <div class="col-span-2 md:col-span-1 space-y-3">
+          <div class="footer-heading">About</div>
+          <p class="font-body text-xs text-slate-500 leading-relaxed">Renext Technologies operates at the intersection of enterprise software automation, AI pipelines, and consumer financial intelligence.</p>
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/[0.03] border border-white/[0.06] font-mono text-[10px] text-slate-400">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block animate-pulse"></span> Flagship Lab: SpendItWisely
+          </div>
+        </div>
+        <div class="space-y-2.5">
+          <div class="footer-heading">Navigate</div>
+          <ul class="space-y-2">
+            <li><a href="index.html"          class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Home</a></li>
+            <li><a href="about.html"          class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> About Renext</a></li>
+            <li><a href="services.html"       class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Services</a></li>
+            <li><a href="spenditwisely.html"  class="footer-link footer-link-mint"><i data-lucide="chevron-right" class="w-3 h-3 text-emerald-500"></i> SpendItWisely</a></li>
+            <li><a href="ai-studio.html"      class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Ads Creative</a></li>
+            <li><a href="contact.html"        class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Contact</a></li>
+          </ul>
+        </div>
+        <div class="space-y-2.5">
+          <div class="footer-heading">Solutions</div>
+          <ul class="space-y-2">
+            <li><a href="services.html#ap-service"              class="footer-link"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> AP OCR Automation</a></li>
+            <li><a href="ai-studio.html"                        class="footer-link"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Ads Creative · Video Ads</a></li>
+            <li><a href="services.html#ai-annotation-service"   class="footer-link"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> AI Data Annotation</a></li>
+            <li><a href="services.html#cloud-finops"            class="footer-link"><i data-lucide="check" class="w-3 h-3 text-blue-600"></i> Cloud &amp; FinOps</a></li>
+            <li><a href="spenditwisely.html"                    class="footer-link footer-link-mint"><i data-lucide="sparkles" class="w-3 h-3 text-emerald-500"></i> SpendItWisely Kirana</a></li>
+          </ul>
+        </div>
+        <div class="space-y-3">
+          <div class="footer-heading">Contact</div>
+          <div class="space-y-2 font-body text-xs text-slate-500">
+            <div class="flex items-start gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-500 shrink-0 mt-0.5"></i><span>1069, Ward No.-5, Khera, Rudrapur, Kichha, Udham Singh Nagar – 263153, Uttarakhand, India</span></div>
+            <a href="tel:+919548492221" class="flex items-center gap-2 hover:text-blue-400 transition-colors font-mono text-[11px]"><i data-lucide="phone" class="w-3.5 h-3.5 text-blue-500"></i> +91 9548492221</a>
+            <a href="mailto:info@renexttechnologies.com" class="flex items-center gap-2 hover:text-blue-400 transition-colors font-mono text-[11px]"><i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i> info@renexttechnologies.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-[10px] text-slate-600">
+        <span>© 2026 Renext Technologies Pvt. Ltd. All rights reserved.</span>
+        <span class="text-emerald-500 font-body text-xs">Flagship Startup: <strong>SpendItWisely™</strong></span>
+        <div class="flex gap-4">
+          <a href="about.html"    class="hover:text-slate-300 transition-colors">About</a>
+          <a href="services.html" class="hover:text-slate-300 transition-colors">Services</a>
+          <a href="contact.html"  class="hover:text-slate-300 transition-colors">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.getElementById('nav-toggle')?.addEventListener('click', () => document.getElementById('mobile-drawer')?.classList.toggle('hidden'));
+    window.addEventListener('scroll', () => document.getElementById('main-nav')?.classList.toggle('scrolled', window.scrollY > 40), { passive: true });
+    if (window.lucide) lucide.createIcons();
+  </script>
+</body>
+</html>

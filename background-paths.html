@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Paths Component Demo | Renext UI</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-r.svg">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Inter', 'sans-serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    @keyframes pathFloat {
+      0% {
+        stroke-dashoffset: 0;
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        stroke-dashoffset: 1000;
+        opacity: 0.3;
+      }
+    }
+
+    .animated-path {
+      stroke-dasharray: 400 600;
+      animation: pathFloat var(--duration, 25s) linear infinite;
+    }
+
+    @keyframes letterSpring {
+      0% {
+        transform: translateY(80px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .spring-letter {
+      display: inline-block;
+      animation: letterSpring 0.9s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body class="h-full bg-white dark:bg-neutral-950 text-slate-900 dark:text-white transition-colors duration-500 overflow-x-hidden">
+
+  <!-- TOP BAR WITH NAVIGATION & CONTROLS -->
+  <div class="fixed top-0 inset-x-0 z-50 flex items-center justify-between px-6 py-4 backdrop-blur-md bg-white/70 dark:bg-neutral-950/70 border-b border-black/5 dark:border-white/10">
+    <div class="flex items-center gap-3">
+      <a href="index.html" class="flex items-center gap-2 font-black tracking-tight text-sm">
+        <span class="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 to-cyan-400 text-white flex items-center justify-center font-bold text-base">R</span>
+        <span>RENEXT UI</span>
+      </a>
+      <span class="text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300 font-mono font-semibold">shadcn / components / ui / background-paths.tsx</span>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <!-- Theme Switcher -->
+      <button id="theme-toggle" class="p-2 rounded-xl border border-black/10 dark:border-white/10 text-xs font-semibold hover:bg-black/5 dark:hover:bg-white/5 transition-colors flex items-center gap-1.5" title="Toggle Dark / Light Mode">
+        <i data-lucide="moon" class="w-4 h-4 dark:hidden"></i>
+        <i data-lucide="sun" class="w-4 h-4 hidden dark:block text-amber-400"></i>
+        <span class="hidden sm:inline">Theme</span>
+      </button>
+
+      <!-- Back to Renext Website -->
+      <a href="index.html" class="px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white hover:bg-blue-700 transition-colors flex items-center gap-1.5 shadow-md shadow-blue-500/20">
+        <span>Corporate Portal</span>
+        <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- MAIN BACKGROUND PATHS WRAPPER -->
+  <div class="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-white dark:bg-neutral-950 pt-16">
+    
+    <!-- DYNAMIC SVG FLOATING PATHS -->
+    <div class="absolute inset-0 pointer-events-none">
+      <svg id="paths-svg-pos" class="absolute inset-0 w-full h-full text-slate-950 dark:text-white" viewBox="0 0 696 316" fill="none" preserveAspectRatio="none">
+        <title>Background Paths Positive</title>
+      </svg>
+      <svg id="paths-svg-neg" class="absolute inset-0 w-full h-full text-slate-950 dark:text-white" viewBox="0 0 696 316" fill="none" preserveAspectRatio="none">
+        <title>Background Paths Negative</title>
+      </svg>
+    </div>
+
+    <!-- FOREGROUND HERO CONTENT -->
+    <div class="relative z-10 container mx-auto px-4 md:px-6 text-center">
+      <div class="max-w-4xl mx-auto">
+        
+        <!-- Interactive Title Input / Spring Animated Header -->
+        <h1 id="hero-heading" class="text-5xl sm:text-7xl md:text-8xl font-bold mb-8 tracking-tighter select-none">
+          <!-- Populated by JS for letter-by-letter spring animation -->
+        </h1>
+
+        <!-- Glassmorphic CTA Card -->
+        <div class="inline-block group relative bg-gradient-to-b from-black/10 to-white/10 dark:from-white/10 dark:to-black/10 p-px rounded-2xl backdrop-blur-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+          <a href="index.html" class="inline-flex items-center justify-center rounded-[1.15rem] px-8 py-6 text-lg font-semibold backdrop-blur-md bg-white/95 hover:bg-white/100 dark:bg-black/95 dark:hover:bg-black/100 text-black dark:text-white transition-all duration-300 group-hover:-translate-y-0.5 border border-black/10 dark:border-white/10 hover:shadow-md dark:hover:shadow-neutral-800/50 cursor-pointer">
+            <span class="opacity-90 group-hover:opacity-100 transition-opacity">
+              Discover Excellence
+            </span>
+            <span class="ml-3 opacity-70 group-hover:opacity-100 group-hover:translate-x-1.5 transition-all duration-300">
+              →
+            </span>
+          </a>
+        </div>
+
+        <!-- Custom Title Switcher Pills -->
+        <div class="mt-12 flex flex-wrap justify-center gap-2 text-xs font-semibold">
+          <span class="text-slate-400 py-1">Try Preset Titles:</span>
+          <button class="preset-title px-3 py-1 rounded-full border border-black/10 dark:border-white/10 hover:bg-blue-50 dark:hover:bg-blue-900/30 text-blue-600 dark:text-blue-400 transition-colors" data-title="Background Paths">Background Paths</button>
+          <button class="preset-title px-3 py-1 rounded-full border border-black/10 dark:border-white/10 hover:bg-blue-50 dark:hover:bg-blue-900/30 text-blue-600 dark:text-blue-400 transition-colors" data-title="Renext Technologies">Renext Technologies</button>
+          <button class="preset-title px-3 py-1 rounded-full border border-black/10 dark:border-white/10 hover:bg-blue-50 dark:hover:bg-blue-900/30 text-blue-600 dark:text-blue-400 transition-colors" data-title="Spend It Wisely">Spend It Wisely</button>
+          <button class="preset-title px-3 py-1 rounded-full border border-black/10 dark:border-white/10 hover:bg-blue-50 dark:hover:bg-blue-900/30 text-blue-600 dark:text-blue-400 transition-colors" data-title="AI Creative Engine">AI Creative Engine</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 1. Generate FloatingPaths SVG Curves
+    function renderFloatingPaths(svgElement, position) {
+      svgElement.innerHTML = '';
+      for (let i = 0; i < 36; i++) {
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        const d = `M-${380 - i * 5 * position} -${189 + i * 6}C-${
+            380 - i * 5 * position
+        } -${189 + i * 6} -${312 - i * 5 * position} ${216 - i * 6} ${
+            152 - i * 5 * position
+        } ${343 - i * 6}C${616 - i * 5 * position} ${470 - i * 6} ${
+            684 - i * 5 * position
+        } ${875 - i * 6} ${684 - i * 5 * position} ${875 - i * 6}`;
+        
+        path.setAttribute('d', d);
+        path.setAttribute('stroke', 'currentColor');
+        path.setAttribute('stroke-width', (0.5 + i * 0.03).toFixed(2));
+        path.setAttribute('stroke-opacity', (0.1 + i * 0.03).toFixed(2));
+        path.classList.add('animated-path');
+        path.style.setProperty('--duration', `${(20 + Math.random() * 10).toFixed(1)}s`);
+        
+        svgElement.appendChild(path);
+      }
+    }
+
+    const svgPos = document.getElementById('paths-svg-pos');
+    const svgNeg = document.getElementById('paths-svg-neg');
+    if (svgPos && svgNeg) {
+      renderFloatingPaths(svgPos, 1);
+      renderFloatingPaths(svgNeg, -1);
+    }
+
+    // 2. Letter-by-Letter Staggered Spring Header
+    function setTitle(titleText) {
+      const heading = document.getElementById('hero-heading');
+      if (!heading) return;
+      heading.innerHTML = '';
+      
+      const words = titleText.split(' ');
+      words.forEach((word, wordIndex) => {
+        const wordSpan = document.createElement('span');
+        wordSpan.className = 'inline-block mr-4 last:mr-0';
+
+        word.split('').forEach((letter, letterIndex) => {
+          const letterSpan = document.createElement('span');
+          letterSpan.textContent = letter;
+          letterSpan.className = 'spring-letter text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 to-neutral-700/80 dark:from-white dark:to-white/80';
+          const delay = (wordIndex * 0.1 + letterIndex * 0.03).toFixed(2);
+          letterSpan.style.animationDelay = `${delay}s`;
+          wordSpan.appendChild(letterSpan);
+        });
+
+        heading.appendChild(wordSpan);
+      });
+    }
+
+    setTitle('Background Paths');
+
+    // 3. Preset Title Buttons
+    document.querySelectorAll('.preset-title').forEach(btn => {
+      btn.addEventListener('click', () => {
+        setTitle(btn.getAttribute('data-title'));
+      });
+    });
+
+    // 4. Dark / Light Mode Toggle
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    // Default to dark mode if preferred
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.classList.add('dark');
+    }
+
+    if (window.lucide) lucide.createIcons();
+  </script>
+</body>
+</html>

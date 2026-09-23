@@ -3,396 +3,422 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SpenditWisely | Spend Smartly — Smart GST & Receipt Savings App</title>
-  <meta name="description" content="SpenditWisely (SIWSS) by Renext Technologies. The smart receipt scanning app that automatically tracks GST components, monthly tax savings, and rewards you on every bill.">
-
-  <!-- Favicon -->
+  <title>SpendItWisely | Spending-Awareness & Kirana Rewards — A Renext Technologies Startup</title>
+  <meta name="description" content="SpendItWisely helps you understand your spending, organise receipts, earn rewards and discover local kirana stores. A Renext Technologies startup initiative.">
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-r.svg">
-
-  <!-- Tailwind CSS via CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            spendit: {
-              50: '#ecfdf5',
-              100: '#d1fae5',
-              400: '#34d399',
-              500: '#10B981',
-              600: '#059669',
-              700: '#047857',
-              800: '#064e3b',
-              900: '#022c22'
-            },
-            brand: {
-              900: '#060D1A',
-              800: '#0B1528',
-              600: '#0066FF'
-            }
-          },
-          fontFamily: {
-            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace']
-          }
-        }
-      }
-    }
-  </script>
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-  <!-- Lucide Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['Inter','sans-serif'],body:['Inter','sans-serif'],mono:['JetBrains Mono','monospace']}}}}</script>
   <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body class="bg-white text-slate-800 antialiased selection:bg-emerald-600 selection:text-white">
+<body class="bg-[#F4F6FB]">
 
-  <!-- TOP PARENT COMPANY NOTICE -->
-  <div class="bg-slate-950 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
-      <div class="flex items-center gap-2">
-        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-        <span class="text-slate-400">An incubated venture by <a href="index.html" class="text-white hover:text-blue-400 font-bold underline decoration-blue-500">Renext Technologies Pvt Ltd</a></span>
+<!-- TOP BAR -->
+<div class="site-topbar">
+  <div class="container flex flex-wrap items-center justify-between gap-2">
+    <div class="flex items-center gap-2">
+      <span class="dot-pulse bg-emerald-400"></span>
+      <span class="text-emerald-400 font-semibold tracking-wide">SPENDITWISELY</span>
+      <span class="text-slate-700 mx-1">|</span>
+      <span class="text-slate-500">A Renext Technologies Startup Initiative</span>
+    </div>
+    <div class="flex items-center gap-4">
+      <a href="tel:+919548492221" class="flex items-center gap-1.5 hover:text-emerald-400 transition-colors">
+        <i data-lucide="phone" class="w-3 h-3 text-blue-400"></i><span>+91 9548492221</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="site-nav" id="main-nav">
+  <div class="container flex items-center justify-between h-[68px]">
+    <a href="index.html" class="flex items-center gap-3" aria-label="Renext Technologies home">
+        <span class="nav-logo-r" aria-hidden="true"></span>
+        <span class="renext-nav-name"><strong>Renext</strong><small>Technologies Pvt Ltd</small></span>
+      </a>
+    <div class="hidden xl:flex items-center gap-7">
+      <a href="index.html"          class="nav-link">Home</a>
+      <a href="about.html"          class="nav-link">About</a>
+      <a href="services.html"       class="nav-link">Services</a>
+      <a href="spenditwisely.html"  class="nav-link-mint active flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span>SpendItWisely</a>
+      <a href="ai-studio.html"      class="nav-link">Ads Creative</a>
+      <a href="contact.html"        class="nav-link">Contact</a>
+    </div>
+    <div class="hidden xl:flex items-center gap-2.5">
+      <a href="#kirana-store"  class="btn btn-sm btn-mint">Kirana Partner</a>
+      <a href="contact.html"   class="btn btn-sm btn-ghost">Contact</a>
+    </div>
+    <button id="nav-toggle" class="xl:hidden p-2 rounded-lg text-slate-400 hover:text-white">
+      <i data-lucide="menu" class="w-5 h-5"></i>
+    </button>
+  </div>
+  <div id="mobile-drawer" class="hidden xl:hidden border-t border-white/5">
+    <div class="container py-4 space-y-1">
+      <a href="index.html"          class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Home</a>
+      <a href="about.html"          class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">About</a>
+      <a href="services.html"       class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Services</a>
+      <a href="spenditwisely.html"  class="block py-2.5 px-3 rounded-lg text-emerald-400 font-semibold text-sm bg-emerald-900/20">SpendItWisely</a>
+      <a href="ai-studio.html"      class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Ads Creative</a>
+      <a href="contact.html"        class="block py-2.5 px-3 rounded-lg text-slate-300 hover:text-white text-sm hover:bg-white/5">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="atm-mint relative overflow-hidden py-28">
+  <div class="container relative z-10">
+    <div class="max-w-4xl">
+      <div class="reveal-1 flex flex-wrap items-center gap-3 mb-8">
+        <span class="chip chip-mint"><i data-lucide="rocket" class="w-3 h-3"></i> A Renext Technologies Startup Initiative</span>
+        <span class="font-mono text-[10px] text-slate-600">// RUDRAPUR, UTTARAKHAND</span>
       </div>
-      <div class="flex items-center gap-4 text-xs font-mono text-slate-400">
-        <span>CIN: U62091UT2026PTC021758</span>
-        <span class="hidden sm:inline">•</span>
-        <a href="index.html" class="text-blue-400 hover:text-white font-sans font-semibold flex items-center gap-1">
-          <span>← Back to Renext Corporate</span>
-        </a>
+      <h1 class="reveal-2 font-display font-black text-white leading-tight mb-6">
+        <span class="block text-[clamp(2.8rem,7vw,6.5rem)] tracking-tight">SpendItWisely</span>
+        <span class="block text-[clamp(1.8rem,4vw,3.5rem)] text-gradient-mint font-bold">Spend Smarter. Track Better.</span>
+      </h1>
+      <p class="reveal-3 font-body text-slate-400 text-base leading-relaxed max-w-2xl mb-10 font-light">
+        SpendItWisely helps you <strong class="text-slate-200">understand your spending</strong>, organise receipts and expenses, earn rewards and discover smarter ways to shop with local kirana partners.
+      </p>
+      <div class="reveal-4 flex flex-wrap gap-3 mb-14">
+        <a href="#how-it-works" class="btn btn-mint btn-lg">Download App (Coming Soon) <i data-lucide="smartphone" class="w-4 h-4"></i></a>
+        <a href="#kirana-store" class="btn btn-ghost btn-lg"><i data-lucide="store" class="w-4 h-4 text-emerald-400"></i> Kirana Partner Program</a>
+      </div>
+      <div class="reveal-5 grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="kpi-block"><div class="kpi-number text-emerald-400">100K+</div><div class="kpi-label">Users Joining</div><div class="kpi-sub">Early Access List</div></div>
+        <div class="kpi-block"><div class="kpi-number text-emerald-400">₹0</div><div class="kpi-label">Free Forever</div><div class="kpi-sub">Consumer App</div></div>
+        <div class="kpi-block"><div class="kpi-number text-emerald-400">4.8★</div><div class="kpi-label">App Rating</div><div class="kpi-sub">Beta Testers</div></div>
+        <div class="kpi-block"><div class="kpi-number text-emerald-400">500+</div><div class="kpi-label">Kirana Partners</div><div class="kpi-sub">Launching Soon</div></div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- SPENDITWISELY HEADER -->
-  <header class="sticky top-0 z-50 glass-nav">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        
-        <!-- Logo -->
-        <a href="spenditwisely.html" class="flex items-center gap-3">
-          <img src="assets/images/spenditwisely-logo.jpg" alt="SpenditWisely Logo" class="w-12 h-12 rounded-xl object-contain shadow-sm border border-slate-200">
-          <div>
-            <div class="flex items-center gap-1">
-              <span class="font-extrabold text-2xl text-slate-900 tracking-tight">Spendit<span class="text-emerald-600">Wisely</span></span>
-            </div>
-            <p class="text-[10px] font-bold text-slate-500 tracking-widest uppercase">Spend Smartly • SIWSS</p>
-          </div>
-        </a>
-
-        <!-- Nav -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-700">
-          <a href="#simulator" class="hover:text-emerald-600 transition-colors">Interactive App</a>
-          <a href="#features" class="hover:text-emerald-600 transition-colors">SIWSS Engine</a>
-          <a href="#calculator" class="hover:text-emerald-600 transition-colors">Tax Calculator</a>
-          <a href="#waitlist" class="hover:text-emerald-600 transition-colors">Early Access Beta</a>
-        </nav>
-
-        <!-- CTA -->
-        <div class="flex items-center gap-3">
-          <a href="#simulator" class="btn-green py-2.5 px-5 text-sm">
-            <i data-lucide="smartphone" class="w-4 h-4"></i>
-            <span>Try Live Simulator</span>
-          </a>
+<!-- FOUR PILLARS -->
+<section class="ctx-white py-24">
+  <div class="container">
+    <div class="text-center max-w-2xl mx-auto mb-12">
+      <div class="section-index-dark mb-4">01 — Core Features</div>
+      <h2 class="t-headline text-[clamp(1.8rem,3.5vw,3rem)] text-slate-900">Everything You Need to <span class="text-cobalt">Spend Wisely</span></h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="p-6 rounded-2xl border border-slate-200 bg-white hover:border-blue-200 hover:shadow-lg transition-all duration-300 space-y-4">
+        <div class="text-4xl">🧾</div>
+        <div class="font-display font-bold text-slate-900">Receipt Management</div>
+        <div class="font-body text-xs text-slate-500 leading-relaxed">Upload paper bills, digital PDFs, or scan receipts with your camera. OCR extracts merchant, items, and amounts automatically.</div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="service-tag">OCR Scan</span><span class="service-tag">PDF Upload</span><span class="service-tag">Auto Extract</span>
+        </div>
+      </div>
+      <div class="p-6 rounded-2xl border border-slate-200 bg-white hover:border-blue-200 hover:shadow-lg transition-all duration-300 space-y-4">
+        <div class="text-4xl">📊</div>
+        <div class="font-display font-bold text-slate-900">Expense Analytics</div>
+        <div class="font-body text-xs text-slate-500 leading-relaxed">Monthly categorized spending dashboard. Understand where your money goes across Food, Transport, Utilities, and more.</div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="service-tag">Categories</span><span class="service-tag">Monthly View</span><span class="service-tag">Tax Export</span>
+        </div>
+      </div>
+      <div class="p-6 rounded-2xl border border-slate-200 bg-white hover:border-emerald-200 hover:shadow-lg transition-all duration-300 space-y-4">
+        <div class="text-4xl">🪙</div>
+        <div class="font-display font-bold text-slate-900">SpendCoins Rewards</div>
+        <div class="font-body text-xs text-slate-500 leading-relaxed">Earn promotional Coins on eligible purchases. Redeem at partner kirana stores for discounts, cashback, and perks.</div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="service-tag">Earn Coins</span><span class="service-tag">Redeem Perks</span><span class="service-tag">Cashback</span>
+        </div>
+      </div>
+      <div class="p-6 rounded-2xl border border-slate-200 bg-white hover:border-emerald-200 hover:shadow-lg transition-all duration-300 space-y-4">
+        <div class="text-4xl">🛍</div>
+        <div class="font-display font-bold text-slate-900">Kirana Commerce</div>
+        <div class="font-body text-xs text-slate-500 leading-relaxed">Discover and support local neighbourhood kirana stores through the merchant directory and loyalty ecosystem.</div>
+        <div class="flex flex-wrap gap-1.5">
+          <span class="service-tag">Local Stores</span><span class="service-tag">Merchant Map</span><span class="service-tag">Loyalty</span>
         </div>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- HERO SECTION -->
-  <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-emerald-50/60 via-white to-slate-50 overflow-hidden">
-    <!-- Glows -->
-    <div class="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-emerald-400/15 blur-3xl pointer-events-none rounded-full"></div>
+<!-- HOW IT WORKS + PHONE MOCKUP -->
+<section id="how-it-works" class="atm-mint py-24">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        
-        <!-- Left Hero Copy -->
-        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-          
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-100/80 border border-emerald-300 text-emerald-800 text-xs font-bold uppercase tracking-wider">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-            <span>Next-Gen Smart Expense & GST Wallet</span>
+      <!-- Left: Stepper -->
+      <div class="lg:col-span-7 space-y-8">
+        <div class="section-index">02 — How It Works</div>
+        <h2 class="t-headline text-[clamp(1.8rem,3.5vw,3rem)] text-white">From Receipt to Reward <span class="text-gradient-mint">in 6 Steps</span></h2>
+        <div class="space-y-4">
+          <p class="t-label text-[#3D5580]">Value Flow Ecosystem</p>
+          <div class="flex flex-wrap gap-2">
+            <button class="step-btn active" data-step="1">Receipt</button>
+            <button class="step-btn" data-step="2">Expense</button>
+            <button class="step-btn" data-step="3">Awareness</button>
+            <button class="step-btn" data-step="4">Coins</button>
+            <button class="step-btn" data-step="5">Rewards</button>
+            <button class="step-btn" data-step="6">Shopping</button>
           </div>
-
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
-            Spend Smartly. <br>
-            <span class="gradient-green-text">Scan Bills & Save Real GST</span> Automatically.
-          </h1>
-
-          <p class="text-lg text-slate-600 max-w-xl mx-auto lg:mx-0 leading-relaxed font-normal">
-            Tired of losing track of daily expenses and missing out on GST tax deductions? <strong>SpenditWisely</strong> uses AI OCR to instantly break down every bill into CGST, SGST, and IGST, calculate your monthly tax savings, and reward you on every receipt.
-          </p>
-
-          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-            <a href="#simulator" class="btn-green py-3.5 px-7 text-base">
-              <i data-lucide="play-circle" class="w-5 h-5"></i>
-              <span>Test Interactive Simulator</span>
-            </a>
-            <a href="#waitlist" class="btn-secondary py-3.5 px-6 text-base">
-              <i data-lucide="bell" class="w-4 h-4 text-emerald-600"></i>
-              <span>Join Play Store Waitlist</span>
-            </a>
-          </div>
-
-          <!-- Feature Badges -->
-          <div class="pt-6 grid grid-cols-3 gap-4 border-t border-slate-200 text-left">
-            <div>
-              <p class="text-2xl font-black text-emerald-600">₹319+</p>
-              <p class="text-xs font-semibold text-slate-500">Avg Monthly Tax Savings</p>
-            </div>
-            <div>
-              <p class="text-2xl font-black text-slate-900">1-Sec</p>
-              <p class="text-xs font-semibold text-slate-500">AI Receipt Scan Time</p>
-            </div>
-            <div>
-              <p class="text-2xl font-black text-blue-600">100%</p>
-              <p class="text-xs font-semibold text-slate-500">Indian GST Compliant</p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Right Hero Interactive Phone Mockup -->
-        <div class="lg:col-span-5 flex flex-col items-center">
-          <div class="phone-mockup-wrap">
-            <div class="phone-screen">
-              
-              <!-- Dynamic Island -->
-              <div class="phone-dynamic-island"></div>
-
-              <!-- Scanner Laser Simulation -->
-              <div id="phone-scan-overlay" class="hidden absolute inset-0 z-30 bg-black/60 flex flex-col items-center justify-center p-6 text-center">
-                <div class="scanner-laser"></div>
-                <div class="border-2 border-dashed border-emerald-400 w-48 h-64 rounded-2xl flex flex-col items-center justify-center p-4">
-                  <i data-lucide="receipt" class="w-10 h-10 text-emerald-400 mb-2 animate-pulse"></i>
-                  <span class="text-xs font-bold text-white">Scanning Receipt OCR...</span>
-                  <span class="text-[10px] text-emerald-300 font-mono mt-1">SIWSS Auto-Detect</span>
-                </div>
-              </div>
-
-              <!-- Real App Active Screenshot -->
-              <img id="phone-active-image" src="assets/images/app-screen-home.jpg" alt="SpenditWisely App Screen" class="phone-img-view">
-
-              <!-- Scan Result Toast Overlay -->
-              <div id="phone-scan-result" class="hidden absolute bottom-16 left-3 right-3 z-40"></div>
-
-            </div>
-          </div>
-
-          <!-- Interactive Screen Switcher Tabs -->
-          <div class="mt-6 flex flex-wrap items-center justify-center gap-2 max-w-sm">
-            <button class="phone-screen-tab px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-600 text-white shadow-md transition-all" data-screen="home">
-              Dashboard
-            </button>
-            <button class="phone-screen-tab px-3.5 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all" data-screen="bills">
-              Bills & History
-            </button>
-            <button class="phone-screen-tab px-3.5 py-1.5 rounded-full text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all" data-screen="spend">
-              Monthly GST
-            </button>
-            <button id="trigger-phone-scan" class="px-3.5 py-1.5 rounded-full text-xs font-bold bg-blue-600 text-white hover:bg-blue-700 transition-all flex items-center gap-1">
-              <i data-lucide="scan" class="w-3.5 h-3.5"></i>
-              <span>Scan Bill</span>
-            </button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- SIWSS ARCHITECTURE & FEATURE DEEP DIVE -->
-  <section id="features" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
-        <span class="badge-pill badge-green">
-          <i data-lucide="cpu" class="w-3.5 h-3.5"></i>
-          Patented Technology
-        </span>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-          How <span class="gradient-green-text">SIWSS</span> Works for You
-        </h2>
-        <p class="text-slate-600 text-base">
-          <strong>Smart Invoice & Wallet Savings System (SIWSS)</strong> turns complex Indian taxation into effortless, automated financial clarity.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        
-        <!-- Pillar 1 -->
-        <div class="feature-card p-8 space-y-4 border-emerald-100 hover:border-emerald-300">
-          <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-emerald-600">
-            <i data-lucide="scan" class="w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900">1. Instant AI Receipt Scan</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">
-            Snap bills from local eateries (like your daily <em>Sardarji ke momos</em> for ₹150), pharmacy bills, grocery marts, or fuel stations. SIWSS detects merchant details, invoice date, and itemized lines in 1 second.
-          </p>
-        </div>
-
-        <!-- Pillar 2 -->
-        <div class="feature-card p-8 space-y-4 border-blue-100 hover:border-blue-300 shadow-sm">
-          <div class="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-600">
-            <i data-lucide="split" class="w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900">2. Automatic GST Split</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">
-            No more manual math. SIWSS automatically calculates CGST, SGST, and IGST breakdowns (e.g. ₹14 CGST + ₹14 SGST), ensuring every rupee of input tax credit is recorded for your business or personal balance sheet.
-          </p>
-        </div>
-
-        <!-- Pillar 3 -->
-        <div class="feature-card p-8 space-y-4 border-amber-100 hover:border-amber-300">
-          <div class="w-14 h-14 rounded-2xl bg-amber-50 border border-amber-200 flex items-center justify-center text-amber-600">
-            <i data-lucide="gift" class="w-7 h-7"></i>
-          </div>
-          <h3 class="text-xl font-bold text-slate-900">3. Rewards & Downloadable Reports</h3>
-          <p class="text-slate-600 text-sm leading-relaxed">
-            Earn coins for every bill uploaded to redeem on partner deals. Generate a monthly GST expenditure statement with 1 click, ready for your Chartered Accountant or self-filing.
-          </p>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- INTERACTIVE TAX & REWARD CALCULATOR -->
-  <section id="calculator" class="py-20 bg-slate-50 border-t border-slate-200">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      
-      <div class="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-xl space-y-8">
-        
-        <div class="text-center space-y-2">
-          <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200">
-            Smart Savings Estimator
-          </span>
-          <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900">See How Much You Can Recover with SpenditWisely</h3>
-          <p class="text-sm text-slate-600">Calculate your potential GST credits, business expense deductions, and rewards based on your monthly spending.</p>
-        </div>
-
-        <div class="space-y-6">
-          <div>
+          <div class="p-5 rounded-xl bg-white/[0.05] border border-white/[0.08]">
             <div class="flex items-center justify-between mb-2">
-              <label class="text-sm font-bold text-slate-800">Your Average Monthly Expenses (Bills & Receipts):</label>
-              <span id="siwss-expense-display" class="text-2xl font-black text-emerald-600 font-mono">₹45,000</span>
+              <span id="step-title" class="font-display font-bold text-sm text-white">1. Receipt Ingestion &amp; Capture</span>
+              <span id="step-badge" class="chip chip-mint text-[9px]">Step 1: Input</span>
             </div>
-            <input id="siwss-expense-slider" type="range" min="5000" max="250000" step="5000" value="45000" class="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-600">
-            <div class="flex justify-between text-xs text-slate-400 font-mono mt-1">
-              <span>₹5,000/mo</span>
-              <span>₹1,00,000/mo</span>
-              <span>₹2,50,000+/mo</span>
-            </div>
-          </div>
-
-          <div class="flex items-center justify-between p-4 rounded-xl bg-slate-50 border border-slate-200">
-            <label class="text-xs font-bold uppercase tracking-wider text-slate-700">Average GST Slab:</label>
-            <select id="siwss-gst-rate" class="text-sm font-bold bg-white border border-slate-300 rounded-lg p-2 focus:outline-none focus:border-emerald-500">
-              <option value="5">5% (Essentials & Food)</option>
-              <option value="12">12% (Electronics & Utilities)</option>
-              <option value="18" selected>18% (Standard Services & Dining)</option>
-              <option value="28">28% (Luxury & Automotive)</option>
-            </select>
-          </div>
-
-          <!-- Computed Outputs -->
-          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-slate-100">
-            <div class="p-5 rounded-2xl bg-emerald-50/70 border border-emerald-200 text-center">
-              <p class="text-xs font-semibold text-emerald-800 uppercase">Monthly Recoverable GST</p>
-              <p id="siwss-gst-monthly" class="text-2xl font-black text-emerald-600 font-mono mt-1">₹6,864</p>
-              <p class="text-[11px] text-emerald-700 mt-1">Input Credit Potential</p>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-blue-50/70 border border-blue-200 text-center">
-              <p class="text-xs font-semibold text-blue-800 uppercase">Annual Tax Deductions</p>
-              <p id="siwss-tax-annual" class="text-2xl font-black text-blue-600 font-mono mt-1">₹97,200</p>
-              <p class="text-[11px] text-blue-700 mt-1">Allowable Expense Write-offs</p>
-            </div>
-
-            <div class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 text-center">
-              <p class="text-xs font-semibold text-amber-800 uppercase">Annual Reward Points</p>
-              <p id="siwss-coins-annual" class="text-2xl font-black text-amber-600 font-mono mt-1">27,000 Pts</p>
-              <p class="text-[11px] text-amber-700 mt-1">Redeemable in App</p>
-            </div>
+            <p id="step-desc" class="font-body text-xs text-slate-400 leading-relaxed">Users upload physical paper bills, digital PDFs, or restaurant receipts. OCR extracts merchant data, itemized lines, and tax components for user review.</p>
           </div>
         </div>
-
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center shrink-0 mt-0.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i></span><span class="font-body text-sm text-slate-300">Scan any bill with your phone camera</span></li>
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center shrink-0 mt-0.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i></span><span class="font-body text-sm text-slate-300">Automatic line-item extraction via OCR</span></li>
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center shrink-0 mt-0.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i></span><span class="font-body text-sm text-slate-300">Monthly category spending breakdown</span></li>
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center shrink-0 mt-0.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i></span><span class="font-body text-sm text-slate-300">Earn SpendCoins on qualifying purchases</span></li>
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center shrink-0 mt-0.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i></span><span class="font-body text-sm text-slate-300">Redeem at kirana partner stores</span></li>
+          <li class="flex items-start gap-3"><span class="w-5 h-5 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center shrink-0 mt-0.5"><i data-lucide="check" class="w-3 h-3 text-emerald-400"></i></span><span class="font-body text-sm text-slate-300">Export reports for personal tax records</span></li>
+        </ul>
       </div>
 
-    </div>
-  </section>
-
-  <!-- WAITLIST / EARLY ACCESS FORM -->
-  <section id="waitlist" class="py-20 bg-gradient-to-b from-slate-900 to-slate-950 text-white">
-    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-      
-      <div class="w-16 h-16 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400 mx-auto">
-        <i data-lucide="bell-ring" class="w-8 h-8"></i>
-      </div>
-
-      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
-        Be First in Line for the SpenditWisely Launch
-      </h2>
-      <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto">
-        We are rolling out SpenditWisely to our early access community across Android and iOS. Join the VIP waitlist today to receive <strong>500 Bonus Reward Coins</strong> on day one.
-      </p>
-
-      <form id="spendit-waitlist-form" class="max-w-md mx-auto space-y-3">
-        <div class="flex flex-col sm:flex-row gap-2">
-          <input type="email" required placeholder="Enter your email address" class="flex-1 text-sm p-3.5 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-emerald-500">
-          <button type="submit" class="btn-green py-3.5 px-6 text-sm font-bold shrink-0">
-            <span>Get VIP Access</span>
+      <!-- Right: Phone -->
+      <div class="lg:col-span-5 flex flex-col items-center gap-5">
+        <div class="phone-frame" style="animation: floatPhone 5s ease-in-out infinite;">
+          <div class="phone-screen">
+            <div class="phone-notch"></div>
+            <div id="siw-scan-overlay" class="scan-overlay hidden">
+              <div class="scan-laser"></div>
+              <div class="border-2 border-dashed border-emerald-400 w-44 h-56 rounded-2xl flex flex-col items-center justify-center p-4 text-center">
+                <i data-lucide="receipt" class="w-9 h-9 text-emerald-400 mb-2 animate-pulse"></i>
+                <span class="font-body text-xs font-bold text-white">Extracting Receipt...</span>
+              </div>
+            </div>
+            <img id="siw-phone-img" src="assets/images/app-screen-home.jpg" alt="SpendItWisely App" class="phone-img">
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-1.5">
+          <button class="phone-tab-btn active" data-screen="home">Dashboard</button>
+          <button class="phone-tab-btn" data-screen="bills">Receipts</button>
+          <button class="phone-tab-btn" data-screen="spend">Monthly</button>
+          <button id="siw-scan-trigger" class="phone-tab-btn bg-blue-600 border-transparent text-white hover:bg-blue-700">
+            <span class="flex items-center gap-1"><i data-lucide="camera" class="w-3 h-3"></i> Scan</span>
           </button>
         </div>
-        <div id="waitlist-feedback" class="hidden p-3 rounded-xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-semibold">
-          🎉 Awesome! You're confirmed on the VIP Early Access list.
+        <div class="font-mono text-[10px] text-slate-600 text-center">Available Soon · iOS &amp; Android</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KIRANA PARTNERS -->
+<section id="kirana-store" class="ctx-white py-24">
+  <div class="container">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+      <div class="space-y-6">
+        <div class="section-index-dark">03 — Kirana Partners</div>
+        <h2 class="t-headline text-[clamp(1.8rem,3.5vw,3rem)] text-slate-900">Partner with <span class="text-cobalt">SpendItWisely</span></h2>
+        <p class="font-body text-slate-500 text-sm leading-relaxed">
+          Register your kirana store to reach a new generation of digital-aware shoppers. SpendItWisely brings loyal, engaged customers to your door — at zero setup cost.
+        </p>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5"><i data-lucide="users" class="w-4 h-4 text-emerald-600"></i></div>
+            <div><div class="font-display font-bold text-sm text-slate-900">Reach 100K+ Digital-Savvy Customers</div><div class="font-body text-xs text-slate-500 mt-0.5">Get featured in the SpendItWisely app discovery feed.</div></div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5"><i data-lucide="coins" class="w-4 h-4 text-emerald-600"></i></div>
+            <div><div class="font-display font-bold text-sm text-slate-900">Reward Loyalty Through Coin Redemption</div><div class="font-body text-xs text-slate-500 mt-0.5">Customers redeem SpendCoins at your store for discounts and perks.</div></div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5"><i data-lucide="map-pin" class="w-4 h-4 text-emerald-600"></i></div>
+            <div><div class="font-display font-bold text-sm text-slate-900">Feature in App Discovery Directory</div><div class="font-body text-xs text-slate-500 mt-0.5">Your store appears on the neighbourhood merchant map.</div></div>
+          </li>
+          <li class="flex items-start gap-3">
+            <div class="w-8 h-8 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0 mt-0.5"><i data-lucide="zap" class="w-4 h-4 text-emerald-600"></i></div>
+            <div><div class="font-display font-bold text-sm text-slate-900">Zero Setup Cost</div><div class="font-body text-xs text-slate-500 mt-0.5">Free registration for qualified kirana partner stores.</div></div>
+          </li>
+        </ul>
+      </div>
+      <div class="p-8 rounded-2xl border border-slate-200 bg-white shadow-sm space-y-6">
+        <div class="text-center space-y-2">
+          <div class="chip chip-mint inline-flex"><i data-lucide="store" class="w-3 h-3"></i> Kirana Partner Registration</div>
+          <h3 class="font-display font-bold text-xl text-slate-900">Register Your Store</h3>
+          <p class="font-body text-xs text-slate-500">Contact us to join the SpendItWisely kirana partner network.</p>
         </div>
-      </form>
-
-      <p class="text-xs text-slate-500">
-        100% Privacy Guaranteed. Incubated & Managed by Renext Technologies Pvt Ltd (CIN: U62091UT2026PTC021758).
-      </p>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="bg-slate-950 text-slate-400 py-10 border-t border-slate-800 text-xs text-center">
-    <div class="max-w-7xl mx-auto px-4 space-y-4">
-      <div class="flex items-center justify-center gap-2">
-        <span class="font-extrabold text-white text-base">SpenditWisely</span>
-        <span class="text-slate-500">•</span>
-        <span>A Renext Technologies Pvt Ltd Company</span>
+        <div class="space-y-4">
+          <div class="flex items-center gap-3 p-4 rounded-xl bg-emerald-50 border border-emerald-100">
+            <i data-lucide="phone" class="w-5 h-5 text-emerald-600 shrink-0"></i>
+            <div>
+              <div class="font-mono text-xs text-slate-500">Call Us Directly</div>
+              <a href="tel:+919548492221" class="font-display font-bold text-lg text-emerald-700 hover:text-emerald-800 transition-colors">+91 9548492221</a>
+            </div>
+          </div>
+          <div class="flex items-center gap-3 p-4 rounded-xl bg-blue-50 border border-blue-100">
+            <i data-lucide="mail" class="w-5 h-5 text-blue-600 shrink-0"></i>
+            <div>
+              <div class="font-mono text-xs text-slate-500">Email Partnership Team</div>
+              <a href="mailto:info@renexttechnologies.com" class="font-display font-bold text-sm text-blue-700 hover:text-blue-800 transition-colors">info@renexttechnologies.com</a>
+            </div>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-mint w-full justify-center">Register as Kirana Partner <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        <p class="font-mono text-[10px] text-slate-400 text-center">Mon–Sat · 10 AM – 6 PM IST</p>
       </div>
-      <p class="text-slate-500 text-[11px]">
-        1069, Ward No. - 5, Khera, Rudarpur, Kichha, Udham Singh Nagar - 263153, Uttarakhand, India • 8273484864 / 9779977942
-      </p>
-      <div class="flex justify-center gap-4 text-[11px] text-slate-500 pt-2">
-        <a href="index.html" class="hover:text-white">Renext Technologies Home</a>
-        <span>•</span>
-        <a href="ai-studio.html" class="hover:text-white">AI Studio (100 Ads/Day)</a>
-        <span>•</span>
-        <a href="index.html#account-payable" class="hover:text-white">Account Payable Service</a>
-        <span>•</span>
-        <a href="index.html#cloud-services" class="hover:text-white">Cloud Services</a>
-      </div>
-      <p class="text-slate-600 text-[10px] pt-4">© 2026 Renext Technologies Pvt Ltd. All rights reserved.</p>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <!-- Scripts -->
-  <script src="assets/js/spenditwisely.js"></script>
-  <script>
-    lucide.createIcons();
-  </script>
+<!-- FAQ -->
+<section class="atm-subtle py-20">
+  <div class="container max-w-3xl mx-auto">
+    <div class="text-center mb-10">
+      <div class="section-index-dark mb-4">04 — FAQ</div>
+      <h2 class="t-headline text-[clamp(1.6rem,3vw,2.6rem)] text-slate-900">Frequently Asked Questions</h2>
+    </div>
+    <div class="space-y-2">
+      <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <div class="faq-header flex items-center justify-between p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+          <span class="font-display font-bold text-sm text-slate-900">Is SpendItWisely free to use?</span>
+          <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-500 transition-transform"></i>
+        </div>
+        <div class="faq-body px-5 pb-5 font-body text-xs text-slate-500 leading-relaxed">Yes, SpendItWisely is completely free for consumers. Our business model is based on merchant partnerships and promotional programs — users never pay to use the core app.</div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <div class="faq-header flex items-center justify-between p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+          <span class="font-display font-bold text-sm text-slate-900">How does receipt scanning work?</span>
+          <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-500 transition-transform"></i>
+        </div>
+        <div class="faq-body px-5 pb-5 font-body text-xs text-slate-500 leading-relaxed">Take a photo of any bill. Our OCR technology extracts merchant name, items, amounts and tax components, then categorises them automatically. Users review and confirm the extraction before it's saved.</div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <div class="faq-header flex items-center justify-between p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+          <span class="font-display font-bold text-sm text-slate-900">What are SpendCoins?</span>
+          <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-500 transition-transform"></i>
+        </div>
+        <div class="faq-body px-5 pb-5 font-body text-xs text-slate-500 leading-relaxed">SpendCoins are promotional rewards earned through mindful spending and receipt organization. They can be redeemed at partner kirana stores for discounts and perks. SpendCoins are promotional reward units — not cash, not cryptocurrency.</div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <div class="faq-header flex items-center justify-between p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+          <span class="font-display font-bold text-sm text-slate-900">Is my financial data secure?</span>
+          <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-500 transition-transform"></i>
+        </div>
+        <div class="faq-body px-5 pb-5 font-body text-xs text-slate-500 leading-relaxed">All data is encrypted in transit and at rest. We never sell your personal financial data to third parties. SpendItWisely only uses your data to power your own spending reports and rewards.</div>
+      </div>
+      <div class="faq-item bg-white border border-slate-200 rounded-xl overflow-hidden">
+        <div class="faq-header flex items-center justify-between p-5 cursor-pointer hover:bg-slate-50 transition-colors">
+          <span class="font-display font-bold text-sm text-slate-900">When will the app launch?</span>
+          <i data-lucide="chevron-down" class="faq-icon w-4 h-4 text-slate-500 transition-transform"></i>
+        </div>
+        <div class="faq-body px-5 pb-5 font-body text-xs text-slate-500 leading-relaxed">SpendItWisely is currently in active development by the Renext Technologies engineering team. Join our early access list by contacting us at info@renexttechnologies.com or calling +91 9548492221.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer pt-16 pb-10">
+  <div class="container">
+    <div class="pb-10 border-b border-white/[0.06] flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <div class="flex items-center gap-3 mb-2"><div class="nav-logo-r">R</div><span class="font-display font-black text-base text-white">RENEXT TECHNOLOGIES PVT. LTD.</span></div>
+        <p class="font-body text-xs text-slate-500 max-w-md">Incubating <span class="text-emerald-400 font-semibold">SpendItWisely</span> — the spending-awareness and kirana rewards ecosystem for everyday India.</p>
+      </div>
+      <a href="contact.html" class="btn btn-mint btn-sm">Get In Touch <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></a>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 py-12 border-b border-white/[0.06]">
+      <div class="col-span-2 md:col-span-1 space-y-3">
+        <div class="footer-heading">SpendItWisely</div>
+        <p class="font-body text-xs text-slate-500 leading-relaxed">A Renext Technologies startup initiative. Helping everyday Indians track spending, earn rewards, and support local kirana commerce.</p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="footer-heading">Navigate</div>
+        <ul class="space-y-2">
+          <li><a href="index.html"         class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Home</a></li>
+          <li><a href="about.html"         class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> About Renext</a></li>
+          <li><a href="services.html"      class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Services</a></li>
+          <li><a href="spenditwisely.html" class="footer-link footer-link-mint"><i data-lucide="chevron-right" class="w-3 h-3 text-emerald-500"></i> SpendItWisely</a></li>
+          <li><a href="ai-studio.html"     class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Ads Creative</a></li>
+          <li><a href="contact.html"       class="footer-link"><i data-lucide="chevron-right" class="w-3 h-3 text-blue-600"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="space-y-2.5">
+        <div class="footer-heading">App Features</div>
+        <ul class="space-y-2">
+          <li><a href="#" class="footer-link footer-link-mint"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> Receipt Scanning</a></li>
+          <li><a href="#" class="footer-link footer-link-mint"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> Expense Analytics</a></li>
+          <li><a href="#" class="footer-link footer-link-mint"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> SpendCoins Rewards</a></li>
+          <li><a href="#kirana-store" class="footer-link footer-link-mint"><i data-lucide="check" class="w-3 h-3 text-emerald-500"></i> Kirana Commerce</a></li>
+        </ul>
+      </div>
+      <div class="space-y-3">
+        <div class="footer-heading">Contact</div>
+        <div class="space-y-2 font-body text-xs text-slate-500">
+          <div class="flex items-start gap-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 text-blue-500 shrink-0 mt-0.5"></i><span>1069, Ward No.-5, Khera, Rudrapur, Kichha, Udham Singh Nagar – 263153, Uttarakhand, India</span></div>
+          <a href="tel:+919548492221" class="flex items-center gap-2 hover:text-blue-400 transition-colors font-mono text-[11px]"><i data-lucide="phone" class="w-3.5 h-3.5 text-blue-500"></i>+91 9548492221</a>
+          <a href="mailto:info@renexttechnologies.com" class="flex items-center gap-2 hover:text-blue-400 transition-colors font-mono text-[11px]"><i data-lucide="mail" class="w-3.5 h-3.5 text-blue-500"></i>info@renexttechnologies.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="pt-7 flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-[10px] text-slate-600">
+      <span>© 2026 Renext Technologies Pvt. Ltd. All rights reserved.</span>
+      <span class="text-emerald-500 font-body text-xs">SpendItWisely™ — Spending-Awareness Ecosystem</span>
+      <div class="flex gap-4"><a href="about.html" class="hover:text-slate-300">About</a><a href="services.html" class="hover:text-slate-300">Services</a><a href="contact.html" class="hover:text-slate-300">Contact</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  document.getElementById('nav-toggle')?.addEventListener('click',()=>document.getElementById('mobile-drawer')?.classList.toggle('hidden'));
+  window.addEventListener('scroll',()=>document.getElementById('main-nav')?.classList.toggle('scrolled',window.scrollY>40),{passive:true});
+
+  // Phone tabs
+  const imgs={'home':'assets/images/app-screen-home.jpg','bills':'assets/images/app-screen-bills.jpg','spend':'assets/images/app-screen-spend.jpg'};
+  document.querySelectorAll('.phone-tab-btn[data-screen]').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.phone-tab-btn[data-screen]').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const img=document.getElementById('siw-phone-img');
+      if(img&&imgs[btn.dataset.screen]){img.style.opacity='0';setTimeout(()=>{img.src=imgs[btn.dataset.screen];img.style.opacity='1';},200);}
+    });
+  });
+
+  // Scan
+  document.getElementById('siw-scan-trigger')?.addEventListener('click',()=>{
+    document.querySelectorAll('.phone-tab-btn[data-screen]').forEach(b=>b.classList.remove('active'));
+    const ov=document.getElementById('siw-scan-overlay');
+    if(ov){ov.classList.remove('hidden');setTimeout(()=>ov.classList.add('hidden'),2400);}
+  });
+
+  // Stepper
+  const stepData=[
+    {title:'1. Receipt Ingestion & Capture',badge:'Step 1: Input',desc:'Users upload physical paper bills, digital PDFs, or restaurant receipts. OCR extracts merchant data, itemized lines, and tax components for user review.'},
+    {title:'2. Expense Categorization',badge:'Step 2: Process',desc:'Extracted data is automatically categorized (Food, Transport, Utilities etc.) and linked to the correct monthly budget bucket.'},
+    {title:'3. Spending Awareness Report',badge:'Step 3: Insight',desc:'Monthly dashboard shows spending patterns, anomalies, and trends — helping users make smarter financial decisions.'},
+    {title:'4. Coins Allocation',badge:'Step 4: Reward',desc:'Eligible purchases earn promotional Coins based on merchant partnerships and mindful spending thresholds.'},
+    {title:'5. Rewards Redemption',badge:'Step 5: Redeem',desc:'Accumulated Coins are redeemed for discounts, cashback, or local merchant perks at partner kirana stores.'},
+    {title:'6. Kirana Commerce',badge:'Step 6: Commerce',desc:'Discover and support local neighbourhood kirana stores through the app\'s merchant directory and loyalty ecosystem.'},
+  ];
+  document.querySelectorAll('.step-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.step-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const d=stepData[parseInt(btn.dataset.step)-1];
+      const t=document.getElementById('step-title');const b=document.getElementById('step-badge');const desc=document.getElementById('step-desc');
+      if(t)t.textContent=d.title;if(b)b.textContent=d.badge;if(desc)desc.textContent=d.desc;
+    });
+  });
+
+  // FAQ
+  document.querySelectorAll('.faq-item').forEach(item=>{
+    item.querySelector('.faq-header')?.addEventListener('click',()=>{
+      const open=item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-body').style.display='none';i.querySelector('.faq-icon')?.style.setProperty('transform','');});
+      if(!open){item.classList.add('open');item.querySelector('.faq-body').style.display='block';item.querySelector('.faq-icon')?.style.setProperty('transform','rotate(180deg)');}
+    });
+    item.querySelector('.faq-body').style.display='none';
+  });
+
+  if(window.lucide)lucide.createIcons();
+})();
+</script>
 </body>
 </html>
