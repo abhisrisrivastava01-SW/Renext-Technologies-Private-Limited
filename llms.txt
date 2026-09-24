@@ -1,0 +1,18 @@
+# Renext Technologies Pvt. Ltd.
+
+> Renext Technologies Private Limited (renexttechnologies.com) is an Indian technology company in Rudrapur, Uttarakhand, founded by Abhishek Srivastava. It builds AI ads automation pipelines and produces AI-assisted video ads with human creative direction, and makes the SpendItWisely spending-awareness app. Not affiliated with RANext Technologies.
+
+## Services
+
+- [AI Ads Automation](https://renexttechnologies.com/ai-ads-automation.html): n8n pipelines that turn a product catalog or briefs into scripted, voiced, captioned AI video ads, sized for 50–100+ per day, with human quality review. From USD 4,900/month + setup; Pipeline Blueprint USD 1,750.
+- [Ads Creative — AI video ads](https://renexttechnologies.com/ai-studio.html): AI UGC-style spokesperson ads, product films, animated explainers and short-form edits for Meta, YouTube, Reels and TikTok. Portfolio, case notes and packages from USD 3,900/month. Pilot sprint available.
+- [Enterprise services](https://renexttechnologies.com/services.html): Cloud FinOps, accounts-payable automation (3-way match), AI data annotation, custom software.
+
+## Product
+
+- [SpendItWisely](https://renexttechnologies.com/spenditwisely.html): consumer app for spending awareness, receipts and local kirana store rewards.
+
+## Company
+
+- [About](https://renexttechnologies.com/about.html)
+- [Contact](https://renexttechnologies.com/contact.html): info@renexttechnologies.com, +91 95484 92221

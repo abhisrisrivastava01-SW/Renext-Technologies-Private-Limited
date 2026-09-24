@@ -17,9 +17,9 @@ Options -Indexes
 <FilesMatch "(^\.|\.(zip|sh|md|txt|tsx?|py|bak|log|jsonl)$|^(package|components|tsconfig|vercel)\.json$|^tailwind\.config\.js$|^index\.(backup|standalone)\.html$)">
   Require all denied
 </FilesMatch>
-<Files "robots.txt">
+<FilesMatch "^(robots|llms)\.txt$">
   Require all granted
-</Files>
+</FilesMatch>
 
 <IfModule mod_headers.c>
   Header always set X-Content-Type-Options "nosniff"

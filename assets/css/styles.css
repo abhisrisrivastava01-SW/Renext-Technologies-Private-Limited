@@ -223,10 +223,12 @@ img {
 }
 
 .nav-logo-r {
+  display: inline-block;
+  vertical-align: middle;
   width: 36px;
   height: 36px;
   flex: none;
-  background: url("../images/logo-r.svg") left center / 144px 36px no-repeat;
+  background: url("../images/logo-r.png") center / contain no-repeat;
   font-size: 0;
   transition: transform 0.2s var(--ease-spring), box-shadow 0.2s ease;
 }
