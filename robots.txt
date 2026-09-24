@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /background-paths.html
 
 Sitemap: https://renexttechnologies.com/sitemap.xml

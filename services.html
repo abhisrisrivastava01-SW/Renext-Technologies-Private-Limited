@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enterprise Services | Renext Technologies Pvt. Ltd.</title>
+  <title>AI Video Ads, AP Automation &amp; Cloud FinOps Services | Renext Technologies</title>
   <meta name="description" content="Account Payable automation, Ads Creative video production, AI Data Annotation, Cloud FinOps — Renext Technologies enterprise services.">
+  <link rel="canonical" href="https://renexttechnologies.com/services.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Renext Technologies">
+  <meta property="og:title" content="AI Video Ads, AP Automation &amp; Cloud FinOps Services | Renext Technologies">
+  <meta property="og:description" content="Account Payable automation, Ads Creative video production, AI Data Annotation, Cloud FinOps — Renext Technologies enterprise services.">
+  <meta property="og:url" content="https://renexttechnologies.com/services.html">
+  <meta property="og:image" content="https://renexttechnologies.com/assets/media/lumiva.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-r.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -241,7 +249,7 @@
           <span id="annotation-count-badge" class="text-[10px] font-mono text-blue-400 ml-auto bg-blue-500/10 px-2 py-1 rounded border border-blue-500/20">3 Active Boxes</span>
         </div>
         <div class="bg-slate-900 p-2 rounded-xl border border-white/[0.08]">
-          <canvas id="annotationCanvas" width="560" height="280" class="w-full h-auto rounded-lg"></canvas>
+          <canvas id="annotationCanvas" width="560" height="280" class="w-full h-auto rounded-lg" style="max-width:100%;height:auto;display:block"></canvas>
         </div>
         <pre id="annotation-json" class="p-3 bg-slate-900/90 text-[10px] font-mono text-slate-300 rounded-xl h-28 overflow-y-auto leading-relaxed border border-white/[0.08]"></pre>
       </div>
@@ -429,7 +437,7 @@
   function updateAP(){const d=apData[sel?.value]||apData.cloud;document.getElementById('ap-vendor-name').textContent=d.vendor;document.getElementById('ap-gstin').textContent=d.gstin;document.getElementById('ap-invoice-no').textContent=d.ref;document.getElementById('ap-po-match').textContent=d.po;document.getElementById('ap-total').textContent=d.total;}
   sel?.addEventListener('change',updateAP);
   runBtn?.addEventListener('click',()=>{runBtn.innerHTML='<span>Scanning Line Items...</span>';setTimeout(()=>{updateAP();runBtn.innerHTML='<span>✓ 3-Way Matched Successfully</span>';if(window.lucide)lucide.createIcons();},600);});
-  approveBtn?.addEventListener('click',()=>alert('Invoice Approved! Dispatched to Bank ERP for instant batch disbursement.'));
+  approveBtn?.addEventListener('click',()=>alert('Demo only: in a live deployment this step would route the matched invoice for approval. No invoice or payment was processed.'));
 
   // Annotation Canvas
   const canvas=document.getElementById('annotationCanvas');

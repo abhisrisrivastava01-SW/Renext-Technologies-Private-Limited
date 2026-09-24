@@ -1,0 +1,9 @@
+/* Enquiry form status — shared by index, contact and ads-creative pages */
+.enquiry-status{margin-top:14px;padding:12px 14px;border-radius:10px;font:500 14px/1.5 Inter,system-ui,sans-serif;border:1px solid transparent}
+.enquiry-status[hidden]{display:none}
+.enquiry-status--pending{background:#f1f5f9;color:#334155;border-color:#cbd5e1}
+.enquiry-status--success{background:#ecfdf5;color:#065f46;border-color:#6ee7b7}
+.enquiry-status--error{background:#fef2f2;color:#991b1b;border-color:#fca5a5}
+.enquiry-status a{color:inherit;text-decoration:underline;font-weight:600}
+form [aria-invalid="true"]{outline:2px solid #dc2626;outline-offset:1px}
+button[aria-busy="true"]{opacity:.7;cursor:progress}

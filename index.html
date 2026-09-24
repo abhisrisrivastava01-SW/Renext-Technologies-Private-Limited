@@ -3,8 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Renext Technologies | SpendItWisely &amp; Enterprise AI Services</title>
-<meta name="description" content="Renext Technologies Pvt. Ltd. — Enterprise Ads Creative, Cloud FinOps, AP Automation, and SpendItWisely, the smart spending-intelligence rewards app.">
+<title>Renext Technologies | AI Video Ads, Cloud FinOps &amp; AP Automation</title>
+<meta name="description" content="Renext Technologies Pvt. Ltd. — AI-assisted video ad production with human creative direction, cloud cost optimisation, AP automation, and SpendItWisely, our spending-awareness app.">
+  <link rel="canonical" href="https://renexttechnologies.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Renext Technologies">
+  <meta property="og:title" content="Renext Technologies | AI Video Ads, Cloud FinOps &amp; AP Automation">
+  <meta property="og:description" content="Renext Technologies Pvt. Ltd. — AI-assisted video ad production with human creative direction, cloud cost optimisation, AP automation, and SpendItWisely, our spending-awareness app.">
+  <meta property="og:url" content="https://renexttechnologies.com/">
+  <meta property="og:image" content="https://renexttechnologies.com/assets/media/lumiva.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"Organization","@id":"https://renexttechnologies.com/#org","name":"Renext Technologies Pvt. Ltd.","url":"https://renexttechnologies.com/","logo":"https://renexttechnologies.com/assets/images/logo-r.svg","email":"info@renexttechnologies.com","telephone":"+91-9548492221","address":{"@type":"PostalAddress","streetAddress":"1069, Ward No. 5, Khera, Kichha","addressLocality":"Rudrapur","addressRegion":"Uttarakhand","postalCode":"263153","addressCountry":"IN"}},
+    {"@type":"WebSite","@id":"https://renexttechnologies.com/#website","url":"https://renexttechnologies.com/","name":"Renext Technologies","publisher":{"@id":"https://renexttechnologies.com/#org"}}
+  ]}
+  </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -470,8 +484,10 @@
   @media (min-width:768px){ .demo-container{padding:42px;} }
 
   /* ROI Slider Styles */
-  .roi-grid{display:grid; gap:32px;}
-  @media (min-width:768px){ .roi-grid{grid-template-columns:1.1fr 1fr; align-items:center;} }
+  .roi-grid{display:grid; gap:32px; grid-template-columns:minmax(0,1fr);}
+  .roi-grid > *{min-width:0;}
+  .roi-cell .v{overflow-wrap:anywhere;}
+  @media (min-width:768px){ .roi-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); align-items:center;} }
   .roi-slider label{display:block; font-size:.88rem; color:var(--muted-dark); margin-bottom:12px; font-weight:500;}
   input[type=range]{
     width:100%; height:6px; border-radius:99px; background:rgba(255,255,255,0.12);
@@ -487,7 +503,7 @@
   }
   .roi-readout{font-family:'JetBrains Mono',monospace; font-variant-numeric:tabular-nums; margin-top:18px; font-size:.88rem; color:var(--muted-dark);}
   .roi-readout b{color:var(--text-dark); font-size:1.02rem;}
-  .roi-cards{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .roi-cards{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px;}
   .roi-cell{border:1px solid var(--hairline-dark); border-radius:var(--radius-md); padding:18px; background:rgba(255,255,255,0.02);}
   .roi-cell .l{font-family:'Inter Tight',sans-serif; font-size:.76rem; letter-spacing:.04em; color:var(--muted-dark); text-transform:uppercase; font-weight:600;}
   .roi-cell .v{font-family:'Inter Tight','JetBrains Mono',monospace; font-variant-numeric:tabular-nums; font-size:1.6rem; font-weight:800; margin-top:8px; color:var(--text-dark);}
@@ -1095,6 +1111,7 @@
   }
 
 </style>
+<link rel="stylesheet" href="assets/css/enquiry.css">
 </head>
 <body>
 
@@ -1913,15 +1930,7 @@
 
       <!-- Right Column: Interactive Lead Query Form -->
       <div class="form-lead-card">
-        <div id="formSuccess" class="form-success-banner" role="status" aria-live="polite">
-          <div style="font-size:1.5rem; line-height:1; color:var(--mint);">✓</div>
-          <div>
-            <strong>Query Received Successfully!</strong>
-            <span id="formSuccessMsg">Thank you! Our engineering team will review your inquiry and reply to your email within 1 business day.</span>
-          </div>
-        </div>
-
-        <form id="contactForm" class="cform" novalidate>
+        <form id="contactForm" class="cform" novalidate data-enquiry data-enquiry-topic="General Inquiry">
           <div class="cform-row">
             <div class="form-group">
               <label for="userName" class="form-label">Full Name *</label>
@@ -1969,7 +1978,7 @@
               <span aria-hidden="true">→</span>
             </button>
             <p class="form-privacy-note">
-              🔒 Confidential. Direct reply within 1 business day &middot; Zero spam guarantee.
+              We reply within one business day. Your details are used only to answer this enquiry.
             </p>
           </div>
         </form>
@@ -2297,51 +2306,7 @@
       }, 60);
     }
 
-    // Lead Query Form Submission Handler
-    var contactForm = document.getElementById('contactForm');
-    var formSuccess = document.getElementById('formSuccess');
-    var formSuccessMsg = document.getElementById('formSuccessMsg');
-    var submitBtn = document.getElementById('submitBtn');
-
-    if(contactForm){
-      contactForm.addEventListener('submit', function(e){
-        e.preventDefault();
-        var nameInput = document.getElementById('userName');
-        var emailInput = document.getElementById('userEmail');
-        var topicInput = document.getElementById('userTopic');
-        var messageInput = document.getElementById('userMessage');
-
-        if(!nameInput || !nameInput.value.trim()){
-          if(nameInput) nameInput.focus();
-          return;
-        }
-        if(!emailInput || !emailInput.value.trim() || !emailInput.value.includes('@')){
-          if(emailInput) emailInput.focus();
-          return;
-        }
-        if(!messageInput || !messageInput.value.trim()){
-          if(messageInput) messageInput.focus();
-          return;
-        }
-
-        var origText = submitBtn.innerHTML;
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<span>Sending Query...</span>';
-
-        setTimeout(function(){
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = origText;
-          if(formSuccess && formSuccessMsg){
-            var clientName = nameInput.value.trim();
-            var clientEmail = emailInput.value.trim();
-            formSuccessMsg.textContent = "Thank you, " + clientName + "! We have received your inquiry regarding " + (topicInput && topicInput.value ? topicInput.value : "your project") + ". Our engineering team will review it and reply directly to " + clientEmail + " within 1 business day.";
-            formSuccess.classList.add('active');
-            contactForm.reset();
-            formSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-          }
-        }, 450);
-      });
-    }
+    // Lead form: handled by assets/js/enquiry.js (real submission, honest status).
 
   } catch(err){}
 })();
@@ -2415,5 +2380,6 @@
   initPackageTabs();
 
 </script>
+<script src="assets/js/enquiry.js" defer></script>
 </body>
 </html>
