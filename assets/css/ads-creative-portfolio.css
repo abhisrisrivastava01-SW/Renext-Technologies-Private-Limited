@@ -28,7 +28,7 @@ img, video { max-width: 100%; }
 .masthead { border-bottom: 1px solid #ffffff1c; background: var(--bg); }
 .masthead-inner { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .wordmark { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; flex-shrink: 0; }
-.renext-mark { display: block; width: 44px; height: 44px; flex: none; background: url("../images/logo-r.svg") left center / 176px 44px no-repeat; }
+.renext-mark { display: block; width: 44px; height: 44px; flex: none; background: url("../images/logo-r.png") center / contain no-repeat; }
 .wordmark-text strong { display: block; font-size: 15px; font-weight: 800; line-height: 1.05; letter-spacing: .02em; }
 .wordmark-text small { display: block; margin-top: 3px; color: #d7d2df; font-size: 10px; font-weight: 650; letter-spacing: .015em; }
 .masthead nav { display: flex; align-items: center; gap: 29px; }
