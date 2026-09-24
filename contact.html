@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us | Renext Technologies Pvt. Ltd.</title>
   <meta name="description" content="Get in touch with Renext Technologies. Enterprise software services, Ads Creative, and SpendItWisely partnership inquiries.">
+  <link rel="canonical" href="https://renexttechnologies.com/contact.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Renext Technologies">
+  <meta property="og:title" content="Contact Us | Renext Technologies Pvt. Ltd.">
+  <meta property="og:description" content="Get in touch with Renext Technologies. Enterprise software services, Ads Creative, and SpendItWisely partnership inquiries.">
+  <meta property="og:url" content="https://renexttechnologies.com/contact.html">
+  <meta property="og:image" content="https://renexttechnologies.com/assets/media/lumiva.jpg">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-r.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,6 +21,7 @@
   <script>tailwind.config={theme:{extend:{fontFamily:{display:['Inter','sans-serif'],body:['Inter','sans-serif'],mono:['JetBrains Mono','monospace']}}}}</script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/enquiry.css">
 </head>
 <body class="bg-[#F4F6FB]">
 
@@ -152,7 +161,7 @@
           <h3 class="font-display font-bold text-xl text-slate-900 mb-1">Send Us a Message</h3>
           <p class="font-body text-xs text-slate-500">We typically respond within 24 business hours.</p>
         </div>
-        <form id="contact-form" class="space-y-5" novalidate>
+        <form id="contact-form" class="space-y-5" novalidate data-enquiry data-enquiry-topic="General Inquiry">
           <div>
             <label for="cf-name" class="form-label">Your Name</label>
             <input id="cf-name" name="name" type="text" class="form-input" placeholder="Full name" required>
@@ -180,7 +189,7 @@
           </div>
           <div>
             <label for="cf-message" class="form-label">Message</label>
-            <textarea id="cf-message" name="message" rows="4" class="form-input resize-none" placeholder="Describe your requirement or question…"></textarea>
+            <textarea id="cf-message" name="message" rows="4" required class="form-input resize-none" placeholder="Describe your requirement or question…"></textarea>
           </div>
           <button type="submit" class="btn btn-primary w-full justify-center">
             Send Message <i data-lucide="send" class="w-4 h-4"></i>
@@ -270,21 +279,11 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
+<script src="assets/js/enquiry.js"></script>
 <script>
 (function(){
   document.getElementById('nav-toggle')?.addEventListener('click',()=>document.getElementById('mobile-drawer')?.classList.toggle('hidden'));
   window.addEventListener('scroll',()=>document.getElementById('main-nav')?.classList.toggle('scrolled',window.scrollY>40),{passive:true});
-  const form=document.getElementById('contact-form');
-  if(form){form.addEventListener('submit',function(e){
-    e.preventDefault();
-    const btn=form.querySelector('button[type="submit"]');
-    if(btn){btn.disabled=true;btn.innerHTML='Sending…';}
-    setTimeout(()=>{
-      if(btn){btn.disabled=false;btn.innerHTML='Send Message <span class="ml-1">→</span>';}
-      form.reset();
-      alert('Message sent! We will contact you within 24 business hours.');
-    },900);
-  });}
   if(window.lucide)lucide.createIcons();
 })();
 </script>
